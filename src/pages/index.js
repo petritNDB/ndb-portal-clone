@@ -1,5 +1,11 @@
 import React from "react"
+import Layout from "components/Layout"
 
 export default function Home() {
-  return <div>NDB TECH</div>
+  return (
+    <Layout>
+      {" "}
+      <div>NDB TECH</div>
+    </Layout>
+  )
 }

@@ -1,0 +1,45 @@
+// $regular-font-weight:400 !default;
+// URL variable
+//-----------------------------
+$base-img-url: "/images";
+
+// Primary colors
+//-----------------------------
+$blue: #3481cf;
+$white: #ffffff;
+$black: #000000;
+$gray: #7f7f7f;
+
+// Derivative colors
+//-----------------------------
+$dark-gray: darken($gray, 23.14%); //#444
+$darker-gray: darken($dark-gray, 6.6667%); //#333
+$darkest-gray: darken($dark-gray, 17.25%); //#181818
+
+// Color palette
+//-----------------------------
+$primary-color: $blue;
+$secondary-color: $black;
+$tertiary-color: $white;
+
+// Font information
+//-----------------------------
+$default-font-family: "Montserrat", sans-serif;
+$default-browser-size: 16;
+$default-font-size: 14px;
+$font-color: $darker-gray;
+$anchor-color: $darker-gray;
+
+// Z-index variable
+//-----------------------------
+$starting-zindex: 1000;
+$zindex-modal-backdrop: $starting-zindex * 3;
+$zindex-modal: $zindex-modal-backdrop + 1;
+
+// Responsive
+//-----------------------------
+$small-screen-min-width: 320px;
+$small-screen-max-width: 568px;
+$medium-screen-min-width: 768px;
+$medium-screen-max-width: 1024px;
+$large-screen-min-width: 1824px;
