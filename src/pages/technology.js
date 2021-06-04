@@ -12,7 +12,7 @@ import NDBdifference from "../components/technology/NDBdifference"
 const Technology = () => {
   return (
     <Layout pageName="technology">
-      <Banner pageName="technology" backImg={backImg} />
+      <Banner pageName="technology" backImg={backImg} bannerLink="Contact us" />
       <CollapsibleGrid />
       <NDBsection1 />
       <NDBsection2 />

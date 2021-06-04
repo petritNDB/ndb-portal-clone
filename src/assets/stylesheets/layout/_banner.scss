@@ -22,6 +22,7 @@
   left: 30%;
   transform: translate(-50%, -50%);
   width: 100%;
+  z-index: -1;
   //   height: 100%;
   //   top: 0;
   //   left: 0;
@@ -38,7 +39,6 @@
   //   left: 30%;
   //   transform: translate(-50%, -50%);
   //   width: 100%;
-  //   z-index: -1;
 }
 .banner__left {
   display: flex;
@@ -53,7 +53,14 @@
   flex-direction: column;
   // flex: 0.2;
   margin-bottom: 7rem;
-  &img:hover {
+  img {
+    transition: transform $trasform-duration;
+  }
+  &:hover img {
     transform: translateX(10px);
+  }
+  span {
+    font-size: px2rem(30);
+    font-weight: $bold-font-weight;
   }
 }

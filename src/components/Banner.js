@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 import logo from "../assets/images/logo.png"
 import arrow from "../assets/images/icons/arrow.png"
 
-const Banner = ({ pageName, backImg }) => {
+const Banner = ({ pageName, backImg,bannerLink }) => {
   let className = ""
 
   if (pageName) {
@@ -28,7 +28,7 @@ const Banner = ({ pageName, backImg }) => {
           />
           <Link to="" className="banner__button">
             <img src={arrow} alt="" />
-            <span>Contact us</span>
+            <span >{bannerLink}</span>
           </Link>
         </div>
         <Navbar />
