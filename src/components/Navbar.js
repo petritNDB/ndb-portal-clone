@@ -7,31 +7,76 @@ const Navbar = () => {
     <nav>
       <div className="nav-links">
         <Link to="/" className="link">
-          Home <img src={navArrow} className="nav-link__arrow" />{" "}
+          Home{" "}
+          <img
+            src={navArrow}
+            className="nav-link__arrow"
+            alt="nav link icon"
+          />{" "}
         </Link>
         <Link to="/company" className="link">
-          Company <img src={navArrow} className="nav-link__arrow" />{" "}
+          Company{" "}
+          <img
+            src={navArrow}
+            className="nav-link__arrow"
+            alt="nav link icon"
+          />{" "}
         </Link>
         <Link to="/sustain" className="link">
-          Sustainability <img src={navArrow} className="nav-link__arrow" />{" "}
+          Sustainability{" "}
+          <img
+            src={navArrow}
+            className="nav-link__arrow"
+            alt="nav link icon"
+          />{" "}
         </Link>
         <Link to="/technology" className="link">
-          Technology <img src={navArrow} className="nav-link__arrow" />{" "}
+          Technology{" "}
+          <img
+            src={navArrow}
+            className="nav-link__arrow"
+            alt="nav link icon"
+          />{" "}
         </Link>
         <Link to="/investors" className="link">
-          Investors <img src={navArrow} className="nav-link__arrow" />{" "}
+          Investors{" "}
+          <img
+            src={navArrow}
+            className="nav-link__arrow"
+            alt="nav link icon"
+          />{" "}
         </Link>
         <Link to="/news" className="link">
-          News <img src={navArrow} className="nav-link__arrow" />{" "}
+          News{" "}
+          <img
+            src={navArrow}
+            className="nav-link__arrow"
+            alt="nav link icon"
+          />{" "}
         </Link>
         <Link to="/careers" className="link">
-          Careers <img src={navArrow} className="nav-link__arrow" />{" "}
+          Careers{" "}
+          <img
+            src={navArrow}
+            className="nav-link__arrow"
+            alt="nav link icon"
+          />{" "}
         </Link>
         <Link to="/contact" className="link">
-          Contact <img src={navArrow} className="nav-link__arrow" />{" "}
+          Contact{" "}
+          <img
+            src={navArrow}
+            className="nav-link__arrow"
+            alt="nav link icon"
+          />{" "}
         </Link>
         <Link to="/shop" className="link">
-          Shop <img src={navArrow} className="nav-link__arrow" />{" "}
+          Shop{" "}
+          <img
+            src={navArrow}
+            className="nav-link__arrow"
+            alt="nav link icon"
+          />{" "}
         </Link>
       </div>
     </nav>

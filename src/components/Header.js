@@ -1,6 +1,6 @@
 import React from "react"
 
-import Container from "components/Container"
+// import Container from "components/Container"
 import Navbar from "./Navbar"
 import { Link } from "gatsby"
 import logo from "../assets/images/logo.png"
