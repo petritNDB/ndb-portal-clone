@@ -1,3 +1,27 @@
-.nav-links{
-   
+.banner__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex: 0.2;
+}
+
+.nav-link {
+   width: 100%;
+  font-size: px2rem(20);
+  font-weight: $light-font-weight;
+  padding: 3px;
+  transition: font-weight 0.2s;
+  text-align: right;
+  @include on-event($self: false) {
+    font-weight: $medium-font-weight;
+  }
+  &__arrow {
+    opacity: 0;
+    transform: translateX(10px);
+    transition: transform 0.3s;
+  }
+  &:hover &__arrow {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }

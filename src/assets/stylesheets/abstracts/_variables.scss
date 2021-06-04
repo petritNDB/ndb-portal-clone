@@ -4,8 +4,7 @@
 
 /// Regular font family
 /// @type List
-$text-font-stack: "Montserrat", "Open Sans", "Helvetica Neue Light",
-  "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$text-font-stack: "Montserrat", sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
@@ -14,8 +13,17 @@ $code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
 
 /// Copy text color
 /// @type Color
-$text-color: rgb(34, 34, 34) !default;
-$base-font-size: 16px;
+$text-color: rgb(0, 0, 0) !default;
+
+//?Base Font Size
+$base-font-size: 16px !default;
+
+///Font Wights
+$light-font-weight: 300;
+$regular-font-weight: 400;
+$medium-font-weight: 500;
+$semibold-font-weight: 600;
+$bold-font-weight: 700;
 
 /// Main brand color
 /// @type Color

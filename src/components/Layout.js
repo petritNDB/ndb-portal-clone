@@ -3,17 +3,21 @@ import PropTypes from "prop-types"
 
 import "assets/stylesheets/main.scss"
 
-import Header from "components/Header"
+import Banner from "components/Banner"
 import Footer from "components/Footer"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, pageName }) => {
+  let className = ""
+
+  if (pageName) {
+    className = `${pageName}-page`
+  }
   return (
     <>
-      <div className="wrapper">
-        <Header />
-        <main>{children}</main>
+      {/* <div className="ndb__wrapper"> */}
+        <main className={className}>{children}</main>
         <Footer />
-      </div>
+      {/* </div> */}
     </>
   )
 }
