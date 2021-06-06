@@ -3,10 +3,11 @@
   flex-direction: column;
   align-items: flex-end;
   flex: 0.2;
+  border: 1px solid red;
 }
 
 .nav-link {
-   width: 100%;
+  width: 100%;
   font-size: px2rem(20);
   font-weight: $light-font-weight;
   padding: 3px;
@@ -24,4 +25,9 @@
     opacity: 1;
     transform: translateX(0px);
   }
+}
+.active {
+  font-weight: $medium-font-weight;
+  opacity: 1;
+
 }

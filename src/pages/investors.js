@@ -1,15 +1,24 @@
 import React from "react"
 import Banner from "../components/Banner"
 import Layout from "../components/Layout"
+import backImg from "../assets/images/technology/bulb.png"
+import CollapsibleGrid from "../components/technology/CollapsibleGrid"
+import NDBsection1 from "../components/technology/NDBsection1"
+import NDBsection2 from "../components/technology/NDBsection2"
+import TechGridOverlay from "../components/technology/TechGridOverlay"
+import NDBsafetyStrategy from "../components/technology/NDBsafetyStrategy"
+import NDBdifference from "../components/technology/NDBdifference"
 
 const Investors = () => {
   return (
-    <Layout>
-      <Banner pageName="investors" />
-
-      <div>
-        <h1>Investors Page</h1>
-      </div>
+    <Layout pageName="investors">
+      <Banner pageName="investors" backImg={backImg} bannerLink="Contact us" />
+      <CollapsibleGrid />
+      <NDBsection1 />
+      <NDBsection2 />
+      <TechGridOverlay />
+      <NDBsafetyStrategy />
+      <NDBdifference />
     </Layout>
   )
 }
