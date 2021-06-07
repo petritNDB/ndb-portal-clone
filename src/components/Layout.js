@@ -5,18 +5,19 @@ import "../assets/stylesheets/main.scss"
 
 // import Banner from "components/Banner"
 import Footer from "./Footer"
+import NDBWrapper from "./NDBWrapper"
 
 const Layout = ({ children, pageName }) => {
   let className = ""
   if (pageName) {
-    className = `${pageName}-page`
+    className = `${pageName}`
   }
   return (
     <>
-      {/* <div className="ndb__wrapper"> */}
+      <NDBWrapper>
         <main className={className}>{children}</main>
         <Footer />
-      {/* </div> */}
+      </NDBWrapper>
     </>
   )
 }
