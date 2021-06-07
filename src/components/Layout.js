@@ -1,19 +1,23 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import "assets/stylesheets/main.scss"
+import "../assets/stylesheets/main.scss"
 
-import Header from "components/Header"
-import Footer from "components/Footer"
+// import Banner from "components/Banner"
+import Footer from "./Footer"
+import NDBWrapper from "./NDBWrapper"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, pageName }) => {
+  let className = ""
+  if (pageName) {
+    className = `${pageName}`
+  }
   return (
     <>
-      <div className="wrapper">
-        <Header />
-        <main>{children}</main>
+      <NDBWrapper>
+        <main className={className}>{children}</main>
         <Footer />
-      </div>
+      </NDBWrapper>
     </>
   )
 }

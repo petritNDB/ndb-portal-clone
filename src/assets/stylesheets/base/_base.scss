@@ -21,15 +21,16 @@ html {
   box-sizing: inherit;
 }
 
+* {
+  // transition: all 0.5s;
+  margin: 0;
+  padding: 0;
+}
 /**
  * Basic styles for links
  */
 a {
-  color: $brand-color;
+  // width: 100%;
+  color: $text-color;
   text-decoration: none;
-
-  @include on-event {
-    color: $text-color;
-    text-decoration: underline;
-  }
 }

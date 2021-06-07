@@ -1,0 +1,55 @@
+.technology {
+  &__collapsible-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: green;
+    padding: px2rem(56);
+    height: clamp(200px, 433px, 433px);
+    * {
+      border: 1px solid;
+    }
+    &__content {
+      text-align: center;
+    }
+    &__title {
+      margin-top: 0;
+    }
+    &__button {
+      text-align: center;
+    }
+    &__button > button {
+      background: none;
+      cursor: pointer;
+    }
+  }
+  &__section1 {
+    position: relative;
+    text-align: justify;
+    height: clamp(200px,600px,600px);
+    p {
+      font-size: px2rem(20);
+      font-weight: $medium-font-weight;
+      line-height: 33px;
+      margin: px2rem(35) auto;
+    }
+    .overlay1,.overlay2 {
+       position: absolute;
+      font-size: 180px;
+      font-weight: $bold-font-weight;
+      text-transform: uppercase;
+      color: rgba($color: #000000, $alpha: 4%);
+    }
+  }
+}
+// .read-more {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
