@@ -17,7 +17,7 @@ const Technology = () => {
     <Layout pageName="technology">
       <Seo title="Technology"/>
       <Banner pageName="technology" backImg={backImg} bannerLink="Contact us" />
-      <CollapsibleGrid />
+      {/* <CollapsibleGrid /> */}
       <NDBsection1 />
       <NDBsection2 />
       <TechGridOverlay />
