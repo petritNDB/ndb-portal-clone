@@ -14,10 +14,10 @@ const Layout = ({ children, pageName }) => {
   }
   return (
     <>
-      <NDBWrapper>
+      {/* <NDBWrapper> */}
         <main className={className}>{children}</main>
         <Footer />
-      </NDBWrapper>
+      {/* </NDBWrapper> */}
     </>
   )
 }

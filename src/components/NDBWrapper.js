@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react"
 
-const NDBWrapper = ({children}) => {
-   return (
-      <div className="ndb-wrapper">
-      { children }
+const NDBWrapper = ({ fullWidth, children }) => {
+  return (
+    <div className={`ndb-wrapper ${fullWidth ? "fullWidth" : ""}`}>
+      {children}
     </div>
-   )
+  )
 }
 
 export default NDBWrapper

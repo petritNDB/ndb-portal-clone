@@ -2,17 +2,92 @@
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 footer {
-  
-   width: 100%;
-   height: 2em;
-   line-height: 2em;
-   color: white;
-   text-align: center;
-   background-color: darkgray;
- 
-   p {
-     font-size: 1em;
-     margin: 0;
-   }
- 
- }
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 250px));
+  gap: 5rem;
+  justify-content: space-between;
+  padding: px2rem(50);
+  background: $gray;
+  margin-top: px2rem(180);
+  .left-side,
+  .right-side,
+  .center-side {
+    display: flex;
+    flex-direction: column;
+  }
+  .left-side {
+    .copyright {
+      font-size: px2rem(10);
+      font-weight: $regular-font-weight;
+    }
+
+    .address {
+      font-size: px2rem(16);
+      font-weight: $regular-font-weight;
+      // line-height: 20px;
+    }
+  }
+
+  .center-side {
+    .contact {
+      width: 100%;
+      margin: px2rem(46) 0 0;
+      .email,
+      .phone {
+        display: flex;
+        justify-content: space-between;
+        margin-top: px2rem(5);
+      }
+      .phone a,
+      .email a {
+        margin-top: 0;
+      }
+      .phone span,
+      .email span {
+        font-weight: $medium-font-weight;
+      }
+    }
+    .social {
+      display: flex;
+      justify-content: space-around;
+      a {
+        margin-top: 1rem;
+      }
+    }
+    .banner__button {
+      margin-top: 2rem;
+      margin-bottom: 0;
+      span {
+        font-size: px2rem(20);
+        font-weight: $regular-font-weight;
+      }
+    }
+  }
+
+  .right-side {
+    font-size: px2rem(20);
+    font-weight: $light-font-weight;
+    .footer-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin: px2rem(46) 0 0;
+    }
+    a {
+      margin: px2rem(5);
+      @include on-event {
+        font-weight: $regular-font-weight;
+      }
+    }
+  }
+  .footer-menu2 {
+    display: flex;
+    justify-content: space-between;
+    font-size: px2rem(10);
+  }
+  .address,
+  .copyright,
+  a {
+    margin: px2rem(46) 0 0;
+  }
+}

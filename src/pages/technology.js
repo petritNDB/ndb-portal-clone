@@ -22,7 +22,7 @@ const Technology = () => {
       <NDBsection2 />
       <TechGridOverlay />
       <NDBsafetyStrategy />
-      <NDBdifference />
+      <NDBdifference fullWidth/>
     </Layout>
   )
 }
