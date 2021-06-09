@@ -13,7 +13,7 @@
   &__banner {
     position: relative;
     //  max-height: px2rem(600);
-    height: 600px;
+    height: clamp(200px,600px,600px);
     display: flex;
     justify-content: space-between;
     padding-top: px2rem(50);
