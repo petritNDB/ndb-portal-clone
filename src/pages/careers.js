@@ -116,7 +116,14 @@ const careers = () => {
         fullWidth
         pageName="Join our dynamic team"
         buttonsName="Departments"
-        link="About us"
+        // linkContent="About us"
+        buttonLink=""
+        buttonWidth="w-20"
+        buttonTitle="About us"
+        buttonImg={arrow}
+        textAlign="text-center"
+        buttonTextOrder="order-2"
+        flex="flex-left"
       />
       <NDBsection1
         backgoundText1={data2.backgoundText1}
@@ -132,8 +139,8 @@ const careers = () => {
         buttonTitle="Apply now through LinkedIn"
         buttonImg={arrow}
         textAlign="text-center"
+        flex="flex-center"
       />
-      
     </Layout>
   )
 }

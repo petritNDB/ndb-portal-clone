@@ -2,20 +2,37 @@
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
 .c-button {
-  display: flex;
-  justify-content: center;
   &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    //  margin: auto;
   }
   &__img {
     transition: transform 0.3s;
-    @include on-event {
-      transform: translateX(10px);
-    }
+  }
+  &:hover &__img {
+    transform: translateX(10px);
   }
   &__name {
   }
 }
-
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.order-1 {
+  order: 1;
+}
+.order-2 {
+  order: 2;
+}
 .w-40 {
   max-width: 40%;
 }

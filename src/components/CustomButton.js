@@ -8,16 +8,24 @@ const CustomButton = ({
   textOrder,
   textAlign,
   buttonWidth,
+  buttonTextOrder,
+  flex,
 }) => {
   return (
     // max-width: 40%;
     //  margin: 70px auto;
-    <div className="c-button">
+    <div className={`c-button ${flex}`}>
       <Link to={buttonLink} className={`c-button__link ${buttonWidth}`}>
-        <img src={buttonImg} alt="buttonImg" className="c-button__img" />
-        <p className={`c-button__name ${textAlign} ${textOrder}`}>
-          {buttonTitle}
-        </p>
+        {buttonImg ? (
+          <img
+            src={buttonImg}
+            alt="buttonImg"
+            className={`c-button__img ${buttonTextOrder}`}
+          />
+        ) : (
+          ""
+        )}
+        <p className={`c-button__name ${textAlign}`}>{buttonTitle}</p>
       </Link>
     </div>
   )
