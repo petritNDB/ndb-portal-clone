@@ -1,31 +1,68 @@
+import { Link } from "gatsby"
 import React from "react"
 import Container from "../Container"
 import NDBWrapper from "../NDBWrapper"
+import arrow from "../../assets/images/icons/arrow.png"
+import CustomButton from "../CustomButton"
 
-const NDBsection1 = () => {
+const NDBsection1 = ({
+  backgoundText1,
+  backgoundText1Style,
+  backgoundText2,
+  backgoundText2Style,
+  NDBSectionTitle,
+  quote,
+  parag1,
+  parag2,
+  parag3,
+  sectionPapper,
+  quoteImg,
+  linkContent,
+  buttonLink,
+  buttonWidth,
+  buttonTitle,
+  buttonImg,
+  textAlign,
+}) => {
   return (
     <NDBWrapper>
       <div className="technology__section1">
-        <span className="overlay1 left top">design</span>
-        <span className="overlay2 right middle">&#38;</span>
+        <span className={`overlay1 ${backgoundText1Style}`}>
+          {backgoundText1}
+        </span>
+        <span className={`overlay2 ${backgoundText2Style}`}>
+          {backgoundText2}
+        </span>
         <Container>
-          <span className="technology__section1-title">NDB</span>
-          <p className="section-content">
-            NDB is one of the earliest adopters and developers of nuclear
-            voltaic cells for mid and high power applications. The self charging
-            battery produces stable power by converting the energy released from
-            nuclear decay into usable energy all throughout its lifetime which
-            is generally many years.
-          </p>
-          <p className="section-content">
-            Nuclear batteries have been around for sometime but the batteries
-            are limited to low power applications due to their efficiency. NDB
-            optimises this technology for high power applications. We propose to
-            reuse nuclear fuel by recycling it to extract radioisotopes.
-            Isotopes from the recycled nuclear waste or from an accelerator
-            release a high level of energy particles that can be transformed
-            into usable energy.
-          </p>
+          <span className="technology__section1-title">{NDBSectionTitle}</span>
+          {quote ? (
+            <div className="section-quote">
+              <img src={quoteImg} />
+              <img src={quoteImg} />
+              <p>{quote}</p>
+            </div>
+          ) : (
+            ""
+          )}
+
+          <p className="section-content">{parag1}</p>
+          <p className="section-content">{parag2}</p>
+          <p className="section-content">{parag3}</p>
+          <div className="section-image">
+            <img src={sectionPapper} />
+          </div>
+          {/* <Link to="contact" className="banner__button">
+            <img src={arrow} alt="" />
+            <span>{linkContent}</span>
+          </Link> */}
+          <CustomButton
+            linkContent={linkContent}
+            buttonLink={buttonLink}
+            buttonWidth={buttonWidth}
+            buttonTitle={buttonTitle}
+            buttonImg={buttonImg}
+            textAlign={textAlign}
+          />
         </Container>
       </div>
     </NDBWrapper>

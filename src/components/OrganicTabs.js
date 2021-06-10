@@ -1,24 +1,47 @@
 import React from "react"
 import Tab from "./organic-tabs/Tab"
 import Tabs from "./organic-tabs/Tabs"
-import tab1 from "../assets/images/technology/tab1.png"
-import tab2 from "../assets/images/technology/tab2.png"
-import tab3 from "../assets/images/technology/tab3.png"
-import tab4 from "../assets/images/technology/tab4.png"
-import tab5 from "../assets/images/technology/tab5.png"
-import tab6 from "../assets/images/technology/tab6.png"
-import tab7 from "../assets/images/technology/tab7.png"
+
 // import tab8 from "../assets/images/technology/tab8.png"
 import tab9 from "../assets/images/technology/tab9.png"
+import arrow from "../assets/images/icons/arrowThin.png"
 import NDBWrapper from "./NDBWrapper"
+import { Link } from "gatsby"
 
-const CollapsibleGrid = ({ fullWidth }) => {
+const CollapsibleGrid = ({ fullWidth, tabs, pageName, buttonsName, link }) => {
   return (
     <NDBWrapper fullWidth={fullWidth}>
       <div className="tabs">
-        <Tabs>
-          <Tab label="Data Center">
-            {/* <div> */}
+        <p className="page-name">{pageName}</p>
+        <Tabs buttonsName={buttonsName}>
+          {tabs.map((tab, index) => {
+            return (
+              <Tab key={index} label={tab.title}>
+                <img src={tab.tabImage} />
+                <div className="content-intro">
+                  <p className="content-title">{tab.title}</p>
+                  <p className="content-bio">{tab.desc}</p>
+                </div>
+                <div className="content-desc">{tab.content}</div>
+                <div className="content-button">
+                  <Link to="contact" className="banner__button">
+                    <img src={arrow} alt="" />
+                    <span>{link}</span>
+                  </Link>
+                </div>
+              </Tab>
+            )
+          })}
+        </Tabs>
+      </div>
+    </NDBWrapper>
+  )
+}
+
+export default CollapsibleGrid
+{
+  /*  <Tabs>
+         <Tab label="Data Center">
             <img src={tab1} />
             <div className="content-intro">
               <p className="content-title">Data Center</p>
@@ -34,10 +57,8 @@ const CollapsibleGrid = ({ fullWidth }) => {
               from local power sources so that in case of interruptions in
               energy, data centers would continue to power computers.
             </div>
-            {/* </div> */}
           </Tab>
           <Tab label="Industries">
-            {/* <div> */}
             <img src={tab2} />
             <div className="content-intro">
               <p className="content-title">Industries</p>
@@ -53,10 +74,8 @@ const CollapsibleGrid = ({ fullWidth }) => {
               from local power sources so that in case of interruptions in
               energy, data centers would continue to power computers.
             </div>
-            {/* </div> */}
           </Tab>
           <Tab label="Costumers Electronics">
-            {/* <div> */}
             <img src={tab3} />
             <div className="content-intro">
               <p className="content-title">Consumers Electronics</p>
@@ -72,10 +91,8 @@ const CollapsibleGrid = ({ fullWidth }) => {
               independent devices, increased device computation power and even
               the opportunity for the rise of personal quantum computing.
             </div>
-            {/* </div> */}
           </Tab>
           <Tab label="Marine">
-            {/* <div> */}
             <img src={tab4} />
             <div className="content-intro">
               <p className="content-title">Marine</p>
@@ -90,10 +107,8 @@ const CollapsibleGrid = ({ fullWidth }) => {
               batteries do, since the collection of energy is dependent on the
               isotope.
             </div>
-            {/* </div> */}
           </Tab>
           <Tab label="Automotive">
-            {/* <div> */}
             <img src={tab5} />
             <div className="content-intro">
               <p className="content-title">Automotive</p>
@@ -110,10 +125,8 @@ const CollapsibleGrid = ({ fullWidth }) => {
               addressing the bottlenecks in E-Vehicles: the battery and mileage
               duration.
             </div>
-            {/* </div> */}
           </Tab>
           <Tab label="Aviation">
-            {/* <div> */}
             <img src={tab6} />
             <div className="content-intro">
               <p className="content-title">Aviation</p>
@@ -129,7 +142,6 @@ const CollapsibleGrid = ({ fullWidth }) => {
               NDB, closing the green circle related to the movement of people
               and goods transportation.
             </div>
-            {/* </div> */}
           </Tab>
           <Tab label="Medical Technology">
             <img src={tab7} />
@@ -146,7 +158,6 @@ const CollapsibleGrid = ({ fullWidth }) => {
             </div>
           </Tab>
           <Tab label="Quantumaro">
-            {/* <div> */}
             <img src={tab2} />
             <div className="content-intro">
               <p className="content-title">Quantumaro</p>
@@ -159,10 +170,8 @@ const CollapsibleGrid = ({ fullWidth }) => {
               pacemakers respectively, can benefit from long battery life in a
               smaller package with an added benefit of safety and longevity.
             </div>
-            {/* </div> */}
           </Tab>
           <Tab label="Space">
-            {/* <div> */}
             <img src={tab9} />
             <div className="content-intro">
               <p className="content-title">Space</p>
@@ -180,13 +189,7 @@ const CollapsibleGrid = ({ fullWidth }) => {
               space hashes. NDB can be utilized to power electric aircrafts,
               space rovers and stations whilst allowing for longer activity and
               reduction of weight with the removal of solar wings.
-              {/* </div> */}
             </div>
-          </Tab>
-        </Tabs>
-      </div>
-    </NDBWrapper>
-  )
+          </Tab> 
+        </Tabs>*/
 }
-
-export default CollapsibleGrid

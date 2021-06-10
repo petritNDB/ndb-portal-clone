@@ -1,3 +1,30 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+.c-button {
+  display: flex;
+  justify-content: center;
+  &__link {
+  }
+  &__img {
+    transition: transform 0.3s;
+    @include on-event {
+      transform: translateX(10px);
+    }
+  }
+  &__name {
+  }
+}
+
+.w-40 {
+  max-width: 40%;
+}
+.w-20 {
+  max-width: 20%;
+}
+.text-center {
+  text-align: center;
+}
+// .w-40{
+//    max-width: 40%;
+// }

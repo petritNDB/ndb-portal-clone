@@ -7,7 +7,7 @@ import logo from "../assets/images/logo.png"
 import arrow from "../assets/images/icons/arrow.png"
 import NDBWrapper from "./NDBWrapper"
 
-const Banner = ({ pageName, backImg, bannerLink }) => {
+const Banner = ({ pageName, backImg, bannerLink,bannerDesc }) => {
   let className = ""
 
   if (pageName) {
@@ -28,7 +28,10 @@ const Banner = ({ pageName, backImg, bannerLink }) => {
             className="banner__overlay"
             alt="banner background "
           />
-          <Link to="" className="banner__button">
+          <p className="banner__description">
+            {bannerDesc}
+          </p>
+          <Link to={pageName} className="banner__button">
             <img src={arrow} alt="" />
             <span>{bannerLink}</span>
           </Link>

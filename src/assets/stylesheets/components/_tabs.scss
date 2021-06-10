@@ -1,9 +1,12 @@
 .tabs {
-  // width: 80%;
-  // font-family: arial;
   margin: 0 auto;
-  // text-align: center;
-  // margin-top: 15vh;
+  .page-name {
+    font-size: px2rem(36);
+    font-weight: $semibold-font-weight;
+    margin-bottom: px2rem(45);
+    margin-top: px2rem(60);
+    text-align: center;
+  }
   .tabs-wrapper {
     position: relative;
     display: flex;
@@ -29,9 +32,14 @@
     flex: 0.2;
   }
   .tab-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     flex: 0.7;
     border-left: 2px solid;
-    padding: 50px;
+    padding: 0 50px;
+    margin: 50px 0;
+
     .content-intro {
       margin-bottom: px2rem(25);
     }
@@ -45,6 +53,20 @@
     .content-desc {
       font-weight: $regular-font-weight;
       line-height: px2rem(33);
+      margin-bottom: auto;
+    }
+    .content-button {
+      position: relative;
+      a {
+        max-width: 30%;
+        margin: 0;
+      }
+      img {
+        width: fit-content;
+        position: absolute;
+        height: auto;
+        top: 100%;
+      }
     }
   }
   .content-title,

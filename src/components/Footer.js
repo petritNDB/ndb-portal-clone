@@ -63,11 +63,11 @@ const Footer = () => {
       <div className="right-side">
         <div className="footer-menu">
           <Link to="/">Home</Link>
-          <Link to="technology">Technology</Link>
-          <Link to="company">Company</Link>
-          <Link to="sustain">Sustainability</Link>
-          <Link to="investor">Investor</Link>
-          <Link to="careers">Careers</Link>
+          <Link to="/technology">Technology</Link>
+          <Link to="/company">Company</Link>
+          <Link to="/sustain">Sustainability</Link>
+          <Link to="/investor">Investor</Link>
+          <Link to="/careers">Careers</Link>
         </div>
 
       </div>

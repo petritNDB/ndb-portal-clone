@@ -46,6 +46,7 @@
       font-weight: $semibold-font-weight;
       text-align: center;
       margin: 0 auto;
+      max-width: 80%;
     }
     .section-content {
       font-size: px2rem(20);
@@ -53,6 +54,30 @@
       text-align: justify;
       line-height: 33px;
       margin: px2rem(35) auto;
+    }
+    .section-image {
+      padding: px2rem(10);
+      text-align: center;
+    }
+    .section-quote {
+      position: relative;
+      font-size: px2rem(22);
+      font-weight: $semibold-font-weight;
+      margin-top: 85px;
+      margin-bottom: 70px;
+      padding: 3rem;
+      text-align: center;
+      img:nth-child(1) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: rotate(180deg);
+      }
+      img:nth-child(2) {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
     }
   }
   &__gridOverlay {
@@ -185,10 +210,7 @@
     }
   }
 }
-.section-image {
-  padding: px2rem(10);
-  text-align: center;
-}
+
 // .read-more {
 //   display: flex;
 //   flex-direction: column;

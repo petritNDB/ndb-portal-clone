@@ -13,7 +13,7 @@
   &__banner {
     position: relative;
     //  max-height: px2rem(600);
-    height: clamp(200px,600px,600px);
+    height: clamp(200px, 600px, 600px);
     display: flex;
     justify-content: space-between;
     padding-top: px2rem(50);
@@ -22,34 +22,24 @@
 .banner__overlay {
   position: absolute;
   top: 50%;
-  left: 30%;
+  left: 45%;
   transform: translate(-50%, -50%);
   width: 100%;
   z-index: -1;
-  //   height: 100%;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   object-fit: contain;
-  //   z-index: -1;
-  //   object-fit: cover;
-  //   z-index: -1;
-  //   object-position: -20rem;
-
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 30%;
-  //   transform: translate(-50%, -50%);
-  //   width: 100%;
 }
 .banner__left {
   display: flex;
-  flex: 0.6;
+  flex: 0.7;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
   //   height: 100%;
+}
+.banner__description {
+  font-size: px2rem(30);
+  font-weight: $bold-font-weight;
+  max-width: 50%;
+  margin-top: 3.25rem;
 }
 .banner__button {
   display: flex;
