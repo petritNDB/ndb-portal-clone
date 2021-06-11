@@ -1,0 +1,95 @@
+// .company {
+.find-us-titile {
+  font-size: px2rem(36);
+  font-weight: $semibold-font-weight;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.find-us {
+  display: flex;
+  justify-content: space-between;
+  &__map {
+    flex: 0.8;
+  }
+  &__locations {
+    flex: 0.2;
+    .location {
+      font-size: px2rem(18);
+      margin: px2rem(25) 0;
+      .country {
+        font-weight: $semibold-font-weight;
+      }
+    }
+  }
+  &__contact {
+    font-size: px2rem(20);
+    p {
+      text-transform: uppercase;
+      font-weight: $medium-font-weight;
+      margin-bottom: 2rem;
+    }
+
+    .email span,
+    .fax span,
+    .phone span {
+      font-weight: $medium-font-weight;
+      margin-right: 1rem;
+    }
+    .email,
+    .fax,
+    .phone {
+      margin: 0.5rem 0;
+    }
+  }
+}
+// }
+.engineers,
+.board,
+.designers {
+  display: flex;
+  flex-wrap: wrap;
+}
+.profileTitle {
+  font-size: px2rem(36);
+  font-weight: $semibold-font-weight;
+  margin-top: px2rem(50);
+}
+.profile {
+  margin: 0 1rem;
+  &:first-child {
+    margin-left: 0;
+  }
+  .name,
+  .position {
+    font-size: px2rem(16);
+    font-weight: $light-font-weight;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .profile-img {
+    position: relative;
+    @include on-event($self: true) {
+      .overlay {
+        background: $black-faded;
+        color: $white;
+      }
+      a {
+        color: $white;
+      }
+    }
+    a {
+      color: transparent;
+      font-weight: $medium-font-weight;
+    }
+    .overlay {
+      background: transparent;
+      color: transparent;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem;
+      transition:all 0.3s;
+    }
+  }
+}

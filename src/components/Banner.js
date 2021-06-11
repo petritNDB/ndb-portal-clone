@@ -3,11 +3,17 @@ import React from "react"
 import Container from "./Container"
 import Navbar from "./Navbar"
 import { Link } from "gatsby"
+import NDBWrapper from "./NDBWrapper"
 import logo from "../assets/images/logo.png"
 import arrow from "../assets/images/icons/arrow.png"
-import NDBWrapper from "./NDBWrapper"
 
-const Banner = ({ pageName, backImg, bannerLink,bannerDesc }) => {
+const Banner = ({
+  pageName,
+  backImg,
+  bannerLink,
+  bannerDesc,
+  bannerLinkName,
+}) => {
   let className = ""
 
   if (pageName) {
@@ -28,12 +34,10 @@ const Banner = ({ pageName, backImg, bannerLink,bannerDesc }) => {
             className="banner__overlay"
             alt="banner background "
           />
-          <p className="banner__description">
-            {bannerDesc}
-          </p>
-          <Link to={pageName} className="banner__button">
+          <p className="banner__description">{bannerDesc}</p>
+          <Link to={bannerLink} className="banner__button">
             <img src={arrow} alt="" />
-            <span>{bannerLink}</span>
+            <span>{bannerLinkName}</span>
           </Link>
         </div>
         <Navbar />

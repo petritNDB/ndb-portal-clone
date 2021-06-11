@@ -4,10 +4,9 @@ import Layout from "../components/Layout"
 import Seo from "../components/seo"
 import NDBsection1 from "../components/technology/NDBsection1"
 import BioSection from "../components/careers/BioSection"
-import OrganicTabs from "../components/OrganicTabs"
+import OrganicTabs from "../components/organic-tabs/OrganicTabs"
 import backImg from "../assets/images/careers/bannerImg.png"
 import tabsImg from "../assets/images/careers/tabsImg.png"
-import quoteImg from "../assets/images/icons/quoteCornerGreen.png"
 import arrow from "../assets/images/icons/arrow.png"
 
 const careers = () => {
@@ -98,14 +97,13 @@ const careers = () => {
       <Banner
         pageName="careers"
         backImg={backImg}
-        bannerLink="About us"
+        bannerLinkName="About us"
         bannerDesc="“Our unity is our strength, our diversity is our power”"
       />
       <NDBsection1
         backgoundText1={data1.backgoundText1}
         NDBSectionTitle={data1.NDBSectionTitle}
         quote={data1.quote}
-        quoteImg={quoteImg}
         parag1={data1.parag1}
         parag2={data1.parag2}
         backgoundText1Style="right top"
@@ -129,7 +127,6 @@ const careers = () => {
         backgoundText1={data2.backgoundText1}
         backgoundText2={data2.backgoundText2}
         NDBSectionTitle={data2.NDBSectionTitle}
-        quoteImg={quoteImg}
         parag1={data2.parag1}
         backgoundText1Style="top right"
         backgoundText2Style="bottom left"

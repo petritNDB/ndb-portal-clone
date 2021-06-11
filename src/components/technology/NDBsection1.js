@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 import Container from "../Container"
 import NDBWrapper from "../NDBWrapper"
-import arrow from "../../assets/images/icons/arrow.png"
+import quoteImg from "../../assets/images/icons/quoteCornerGreen.png"
 import CustomButton from "../CustomButton"
 
 const NDBsection1 = ({
@@ -12,11 +12,13 @@ const NDBsection1 = ({
   backgoundText2Style,
   NDBSectionTitle,
   quote,
+  quoteAuthor,
   parag1,
   parag2,
   parag3,
+  paragOverQuote,
   sectionPapper,
-  quoteImg,
+  // quoteImg,
   linkContent,
   buttonLink,
   buttonWidth,
@@ -36,11 +38,13 @@ const NDBsection1 = ({
         </span>
         <Container>
           <span className="technology__section1-title">{NDBSectionTitle}</span>
+          <p className="section-content">{paragOverQuote}</p>
           {quote ? (
             <div className="section-quote">
               <img src={quoteImg} />
               <img src={quoteImg} />
               <p>{quote}</p>
+              <span className="quote-author">{quoteAuthor}</span>
             </div>
           ) : (
             ""

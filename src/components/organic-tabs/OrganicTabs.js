@@ -1,15 +1,15 @@
 import React from "react"
-import Tab from "./organic-tabs/Tab"
-import Tabs from "./organic-tabs/Tabs"
+import Tab from "./Tab"
+import Tabs from "./Tabs"
 
 // import tab8 from "../assets/images/technology/tab8.png"
-import tab9 from "../assets/images/technology/tab9.png"
-import arrow from "../assets/images/icons/arrowThin.png"
-import NDBWrapper from "./NDBWrapper"
+import tab9 from "../../assets/images/technology/tab9.png"
+import arrow from "../../assets/images/icons/arrowThin.png"
+import NDBWrapper from "../NDBWrapper"
 import { Link } from "gatsby"
-import CustomButton from "./CustomButton"
+import CustomButton from "../CustomButton"
 
-const CollapsibleGrid = ({
+const OrganicTabs = ({
   fullWidth,
   tabs,
   pageName,
@@ -61,4 +61,4 @@ const CollapsibleGrid = ({
   )
 }
 
-export default CollapsibleGrid
+export default OrganicTabs

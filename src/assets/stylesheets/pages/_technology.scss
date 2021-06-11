@@ -64,9 +64,10 @@
       font-size: px2rem(22);
       font-weight: $semibold-font-weight;
       margin-top: 85px;
-      margin-bottom: 70px;
+      margin-bottom: 200px;
       padding: 3rem;
       text-align: center;
+
       img:nth-child(1) {
         position: absolute;
         top: 0;
@@ -77,6 +78,13 @@
         position: absolute;
         bottom: 0;
         right: 0;
+      }
+      p {
+        margin-bottom: 1rem;
+      }
+      .quote-author {
+        font-size: px2rem(18);
+        font-weight: $regular-font-weight;
       }
     }
   }

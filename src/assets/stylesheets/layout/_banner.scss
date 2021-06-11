@@ -18,7 +18,7 @@
     justify-content: space-between;
     padding-top: px2rem(50);
   }
-}
+} 
 .banner__overlay {
   position: absolute;
   top: 50%;
@@ -39,7 +39,7 @@
   font-size: px2rem(30);
   font-weight: $bold-font-weight;
   max-width: 50%;
-  margin-top: 3.25rem;
+  margin-top: px2rem(120);
 }
 .banner__button {
   display: flex;
