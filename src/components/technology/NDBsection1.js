@@ -1,9 +1,9 @@
 import { Link } from "gatsby"
 import React from "react"
-import Container from "../Container"
-import NDBWrapper from "../NDBWrapper"
+import Container from "../container"
+import NDBWrapper from "../wrapper"
 import quoteImg from "../../assets/images/icons/quoteCornerGreen.png"
-import CustomButton from "../CustomButton"
+import CustomButton from "../customButton"
 
 const NDBsection1 = ({
   backgoundText1,

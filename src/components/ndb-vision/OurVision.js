@@ -1,9 +1,10 @@
 import React from "react"
-import NDBWrapper from "../NDBWrapper"
+import NDBWrapper from "../wrapper"
 
-const OurVision = ({ cards }) => {
+const OurVision = ({ cards, visionTitle }) => {
   return (
     <NDBWrapper fullWidth>
+      <p className="vision-title">{visionTitle}</p>
       <div className="ndb-vision">
         {cards.map((card, index) => {
           const {
@@ -15,14 +16,11 @@ const OurVision = ({ cards }) => {
             bold,
           } = card
           return (
-            <div
-              className={`ndb-vision__card `}
-              key={index}
-            >
+            <div className={`ndb-vision__card `} key={index}>
               <img src={cardImage} className="card-image overlay" alt="card" />
               {/* <p className="card-number">{cardNumber}</p> */}
               <p className="card-title">{cardTitle}</p>
-              <p className="car-content">{cardContent}</p>
+              <p className="card-content">{cardContent}</p>
             </div>
           )
         })}

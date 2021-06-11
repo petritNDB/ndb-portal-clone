@@ -1,6 +1,6 @@
 import React from "react"
 import circuit from "../../assets/images/svg/fullCirciut.svg"
-import NDBWrapper from "../NDBWrapper"
+import NDBWrapper from "../wrapper"
 
 const NDBdifference = ({fullWidth}) => {
   return (

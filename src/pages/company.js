@@ -1,21 +1,23 @@
 import React from "react"
-import Banner from "../components/Banner"
-import Layout from "../components/Layout"
+import Banner from "../components/banner"
+import Layout from "../components/layout"
 import Seo from "../components/seo"
 import NDBsection1 from "../components/technology/NDBsection1"
 import FindUs from "../components/company/FindUs"
 import OurVision from "../components/ndb-vision/OurVision"
 import backImg from "../assets/images/company/headSwirl2.png"
-import vision1 from "../assets/images/company/vision1.png"
-import vision2 from "../assets/images/company/vision2.png"
-import vision3 from "../assets/images/company/vision3.png"
-import vision4 from "../assets/images/company/vision4.png"
+import vision1 from "../assets/images/company/vision1.svg"
+import vision2 from "../assets/images/company/vision2.svg"
+import vision3 from "../assets/images/company/vision3.svg"
+import vision4 from "../assets/images/company/vision4.svg"
 import vision5 from "../assets/images/company/vision5.png"
 import profile1 from "../assets/images/company/profile1.png"
 import profile2 from "../assets/images/company/profile2.png"
 import profile3 from "../assets/images/company/profile3.png"
 import profile4 from "../assets/images/company/profile4.png"
+import bulb from "../assets/images/company/vision5.svg"
 import TeamMembers from "../components/ndb-vision/TeamMembers"
+import NDBWrapper from "../components/wrapper"
 
 const Company = () => {
   const data1 = {
@@ -50,14 +52,14 @@ const Company = () => {
       cardImage: vision2,
     },
     {
-      cardTitle: "",
+      cardTitle: "To power a sustainable future.",
       cardContent:
         "The battery industry is always looking for efficient and cost-effective alternatives. NDB has accepted this challenge and is working towards improving this field.",
       // cardNumber: "3",
       cardImage: vision3,
     },
     {
-      cardTitle: "",
+      cardTitle: "To create a reliable alternative energy source.",
       cardContent:
         "NDB cares about the environment and wants to help the world in understanding the importance of disposing of waste, as it is a threat to future generations’ wellbeing.",
       // cardNumber: "4",
@@ -185,7 +187,16 @@ const Company = () => {
         backgoundText1Style="top left"
       />
       <FindUs />
-      <OurVision cards={cards} />
+      <OurVision cards={cards} visionTitle="Our Vision" />
+      <NDBWrapper fullWidth>
+        <div className="bulb-section">
+          <img src={bulb} alt="" className="overlay top left" />
+          <p>
+            We research, invent, develop technologies to provide greater access
+            to a cleaner and greener world.
+          </p>
+        </div>
+      </NDBWrapper>
       <NDBsection1
         backgoundText1={data2.backgoundText1}
         NDBSectionTitle={data2.NDBSectionTitle}

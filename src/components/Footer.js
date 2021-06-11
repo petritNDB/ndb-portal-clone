@@ -7,9 +7,6 @@ import instagram from "../assets/images/icons/instagram.png"
 import linkedIn from "../assets/images/icons/linkedin.png"
 import twitter from "../assets/images/icons/twitter.png"
 
-import Container from "../components/Container"
-import NDBWrapper from "./NDBWrapper"
-
 const Footer = () => {
   return (
     // <NDBWrapper>
@@ -69,10 +66,7 @@ const Footer = () => {
           <Link to="/investor">Investor</Link>
           <Link to="/careers">Careers</Link>
         </div>
-
       </div>
-       
-       
     </footer>
     // </NDBWrapper>
   )

@@ -1,11 +1,11 @@
 import React from "react"
 import map from "../../assets/images/svg/map.svg"
-import NDBWrapper from "../NDBWrapper"
+import NDBWrapper from "../wrapper"
 
 const FindUs = () => {
   return (
     <NDBWrapper id="company">
-      <p className="find-us-titile">Find us</p>
+      <p className="find-us-title">Find us</p>
 
       <div className="find-us">
         <div className="find-us__locations">

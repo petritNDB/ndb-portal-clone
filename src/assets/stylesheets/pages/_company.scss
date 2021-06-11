@@ -1,5 +1,5 @@
 // .company {
-.find-us-titile {
+.find-us-title {
   font-size: px2rem(36);
   font-weight: $semibold-font-weight;
   text-align: center;
@@ -8,6 +8,7 @@
 .find-us {
   display: flex;
   justify-content: space-between;
+  margin-bottom: px2rem(100);
   &__map {
     flex: 0.8;
   }
@@ -89,7 +90,24 @@
       flex-direction: column;
       justify-content: space-between;
       padding: 1rem;
-      transition:all 0.3s;
+      transition: all 0.3s;
     }
+  }
+}
+.bulb-section {
+  position: relative;
+  height: max(200px, 412px);
+  text-align: center;
+  margin-top: px2rem(10);
+  img {
+    z-index: -1;
+    object-fit: cover;
+  }
+  p {
+    font-size: px2rem(36);
+    font-weight: $bold-font-weight;
+    line-height: px2rem(44);
+    color: $white;
+    padding: 8rem;
   }
 }

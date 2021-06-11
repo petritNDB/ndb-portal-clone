@@ -5,9 +5,9 @@ import Tabs from "./Tabs"
 // import tab8 from "../assets/images/technology/tab8.png"
 import tab9 from "../../assets/images/technology/tab9.png"
 import arrow from "../../assets/images/icons/arrowThin.png"
-import NDBWrapper from "../NDBWrapper"
+import NDBWrapper from "../wrapper"
 import { Link } from "gatsby"
-import CustomButton from "../CustomButton"
+import CustomButton from "../customButton"
 
 const OrganicTabs = ({
   fullWidth,

@@ -1,9 +1,9 @@
 import React from "react"
 
-import Container from "./Container"
-import Navbar from "./Navbar"
+import Container from "./container"
+import Navbar from "./navbar"
 import { Link } from "gatsby"
-import NDBWrapper from "./NDBWrapper"
+import NDBWrapper from "./wrapper"
 import logo from "../assets/images/logo.png"
 import arrow from "../assets/images/icons/arrow.png"
 

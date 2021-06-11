@@ -4,8 +4,8 @@ import PropTypes from "prop-types"
 import "../assets/stylesheets/main.scss"
 
 // import Banner from "components/Banner"
-import Footer from "./Footer"
-import NDBWrapper from "./NDBWrapper"
+import Footer from "./footer"
+import NDBWrapper from "./wrapper"
 
 const Layout = ({ children, pageName }) => {
   let className = ""

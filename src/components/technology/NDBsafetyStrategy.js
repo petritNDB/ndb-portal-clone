@@ -1,6 +1,6 @@
 import React from "react"
-import Container from "../Container"
-import NDBWrapper from "../NDBWrapper"
+import Container from "../container"
+import NDBWrapper from "../wrapper"
 
 const NDBsafetyStrategy = () => {
   return (
