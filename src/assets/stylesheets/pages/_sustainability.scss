@@ -1,0 +1,21 @@
+.middle-grid {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    //  flex: 0.1;
+    //  flex: 0.4;
+    img {
+      // width: 100%;
+    }
+    p {
+      font-size: px2rem(20);
+      font-weight: $semibold-font-weight;
+      margin-top: 1rem;
+    }
+  }
+}

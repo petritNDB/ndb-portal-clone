@@ -50,10 +50,11 @@
     }
     .section-content {
       font-size: px2rem(20);
-      font-weight: $medium-font-weight;
+      font-weight: $regular-font-weight;
       text-align: justify;
-      line-height: 33px;
+      line-height: 36px;
       margin: px2rem(35) auto;
+        border: 1px solid red;
     }
     .section-image {
       padding: px2rem(10);
@@ -63,9 +64,9 @@
       position: relative;
       font-size: px2rem(22);
       font-weight: $semibold-font-weight;
-      margin-top: 85px;
-      margin-bottom: 150px;
-      padding: 3rem;
+      margin: 75px 0;
+      // margin-bottom: 150px;
+      padding: 1rem 2rem;
       text-align: center;
 
       img:nth-child(1) {

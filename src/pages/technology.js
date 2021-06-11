@@ -8,7 +8,7 @@ import NDBsection1 from "../components/technology/NDBsection1"
 import TechGridOverlay from "../components/technology/TechGridOverlay"
 import NDBsafetyStrategy from "../components/technology/NDBsafetyStrategy"
 import NDBdifference from "../components/technology/NDBdifference"
-import backImg from "../assets/images/technology/bulb2.png"
+import backImg from "../assets/images/technology/bulb.svg"
 import sectionPapper from "../assets/images/technology/sciencePaper.png"
 import tab1 from "../assets/images/technology/tab1.png"
 import tab2 from "../assets/images/technology/tab2.png"
@@ -24,20 +24,20 @@ const Technology = () => {
     backgoundText1: "DESIGN",
     backgoundText2: "&",
     NDBSectionTitle: "NDB",
-    parag1:
+    paragraphUnderQuote1:
       "NDB is one of the earliest adopters and developers of nuclear voltaic cells for mid and high power applications. The self charging battery produces stable power by converting the energy released from nuclear decay into usable energy all throughout its lifetime which is generally many years.",
-    parag2:
+    paragraphOverQuote2:
       "Nuclear batteries have been around for sometime but the batteries are limited to low power applications due to their efficiency. NDB optimises this technology for high power applications. We propose to reuse nuclear fuel by recycling it to extract radioisotopes. Isotopes from the recycled nuclear waste or from an accelerator release a high level of energy particles that can be transformed into usable energy.",
   }
   const data2 = {
     backgoundText1: "techno-",
     backgoundText2: "logy",
     NDBSectionTitle: "NDB Voltaic Cell",
-    parag1:
+    paragraphUnderQuote1:
       "NDB is a combination of an emitter, NDB T1 transducer and a collector which form an ohmic and Schottky contact. Different dopants enhance the structure.",
-    parag2:
+    paragraphOverQuote2:
       "The energetic radiations released from radioactive decay scatter and deposit energy into the transducing elements. The isotope, together with the host, generates electricity on its own.",
-    parag3:
+    paragraphOverQuote3:
       "Several single units are attached together to create a stack arrangement, which is fabricated to create a positive and negative contact surface similar to a common battery system.",
   }
   const tabs = [
@@ -129,8 +129,8 @@ const Technology = () => {
         backgoundText1={data1.backgoundText1}
         backgoundText2={data1.backgoundText2}
         NDBSectionTitle={data1.NDBSectionTitle}
-        parag1={data1.parag1}
-        parag2={data1.parag2}
+        paragraphUnderQuote1={data1.paragraphUnderQuote1}
+        paragraphOverQuote2={data1.paragraphOverQuote2}
         backgoundText1Style="top left"
         backgoundText2Style="right middle-4"
       />
@@ -138,9 +138,9 @@ const Technology = () => {
         backgoundText1={data2.backgoundText1}
         backgoundText2={data2.backgoundText2}
         NDBSectionTitle={data2.NDBSectionTitle}
-        parag1={data2.parag1}
-        parag2={data2.parag2}
-        parag3={data2.parag3}
+        paragraphUnderQuote1={data2.paragraphUnderQuote1}
+        paragraphOverQuote2={data2.paragraphOverQuote2}
+        paragraphOverQuote3={data2.paragraphOverQuote3}
         backgoundText1Style="top right"
         backgoundText2Style="middle-4 left"
         sectionPapper={sectionPapper}

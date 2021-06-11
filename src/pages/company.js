@@ -26,14 +26,14 @@ const Company = () => {
     quote:
       "“NDB imagines things that others don’t. We believe in our abilities and products, whilst developing solutions that are unmatched in the market.”",
     quoteAuthor: "Nima Golsharifi, CEO ",
-    paragOverQuote:
+    paragraphOverQuote1:
       "NDB, Inc. is a Silicon Valley-based nanotechnology company established for the development and manufacturing of semiconductor chipset, battery solutions, and energy propulsion systems",
   }
   const data2 = {
     backgoundText1: "team",
     NDBSectionTitle: "Our team",
     quote: "Research, invent, develop and analyze in every step of the way.",
-    paragOverQuote:
+    paragraphOverQuote1:
       "NDB values teamwork, mutual respect and transparency. NDB’s strength lies in diversity, it is a source of power and helps the company to have different perspectives. This commitment to diversity makes the work environment more engaging, respectful and welcoming. NDB has a strong multidisciplinary team that gathers expertise from all different disciplines.",
   }
   const cards = [
@@ -183,7 +183,7 @@ const Company = () => {
         NDBSectionTitle={data1.NDBSectionTitle}
         quote={data1.quote}
         quoteAuthor={data1.quoteAuthor}
-        paragOverQuote={data1.paragOverQuote}
+        paragraphOverQuote={data1.paragraphOverQuote}
         backgoundText1Style="top left"
       />
       <FindUs />
@@ -201,8 +201,8 @@ const Company = () => {
         backgoundText1={data2.backgoundText1}
         NDBSectionTitle={data2.NDBSectionTitle}
         quote={data2.quote}
-        paragOverQuote={data2.paragOverQuote}
-        backgoundText1Style="bottom right"
+        paragraphOverQuote1={data2.paragraphOverQuote1}
+        backgoundText1Style="bottom-20 right"
       />
       <TeamMembers board={board} engineers={engineers} designers={designers} />
     </Layout>

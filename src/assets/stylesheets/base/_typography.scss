@@ -39,8 +39,12 @@ body {
 .bottom {
   bottom: 0;
 }
+.bottom-20 {
+  bottom: -20%;
+}
 .middle {
   top: 50%;
+  transform: translateY(-50%);
 }
 .top {
   top: 0;

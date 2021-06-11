@@ -21,9 +21,10 @@
 } 
 .banner__overlay {
   position: absolute;
-  top: 50%;
-  left: 45%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  // top: 50%;
+  // left: 45%;
+  // transform: translate(-50%, -50%);
   width: 100%;
   z-index: -1;
 }
@@ -39,7 +40,7 @@
   font-size: px2rem(30);
   font-weight: $bold-font-weight;
   max-width: 50%;
-  margin-top: px2rem(120);
+  margin-top: px2rem(160);
 }
 .banner__button {
   display: flex;

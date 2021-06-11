@@ -15,16 +15,16 @@ const careers = () => {
     NDBSectionTitle: "Why Working at NDB is the occasion that you can’t miss",
     quote:
       "“Bring your passion, your talent and drive innovation across the globe.”",
-    parag1:
+    paragraphUnderQuote1:
       "We think that working at NDB will be one of the highlights of your life, something to be proud to share.",
-    parag2:
+    paragraphUnderQuote2:
       "NDB offers career opportunities as it favors skill development in the energy sector. We encourage and reward effort and commitment as it is a benefit for the entire team and the future of the company. Talent is the key and this is what we are looking for. Embrace our unique and immersive culture inside our company and carry our values. Thanks to diversity and hard work we are able to achieve exceptional productivity, quality, creativity and innovation for the company and its partners.",
   }
   const data2 = {
     backgoundText1: "early",
     backgoundText2: "careers",
     NDBSectionTitle: "INTERNSHIP / APPRENTICESHIP",
-    parag1:
+    paragraphUnderQuote1:
       "Are you a university student or trying to start your career? NDB is always looking for talented people. Find new opportunities and challenge yourself with NDB, we will guide you through it all. ",
   }
   const tabs = [
@@ -104,8 +104,8 @@ const careers = () => {
         backgoundText1={data1.backgoundText1}
         NDBSectionTitle={data1.NDBSectionTitle}
         quote={data1.quote}
-        parag1={data1.parag1}
-        parag2={data1.parag2}
+        paragraphUnderQuote1={data1.paragraphUnderQuote1}
+        paragraphUnderQuote2={data1.paragraphUnderQuote2}
         backgoundText1Style="right top"
       />
       <BioSection />
@@ -115,7 +115,7 @@ const careers = () => {
         pageName="Join our dynamic team"
         buttonsName="Departments"
         // linkContent="About us"
-        buttonLink=""
+        buttonLink="/"
         buttonWidth="w-20"
         buttonTitle="About us"
         buttonImg={arrow}
@@ -127,11 +127,11 @@ const careers = () => {
         backgoundText1={data2.backgoundText1}
         backgoundText2={data2.backgoundText2}
         NDBSectionTitle={data2.NDBSectionTitle}
-        parag1={data2.parag1}
+        paragraphUnderQuote1={data2.paragraphUnderQuote1}
         backgoundText1Style="top right"
-        backgoundText2Style="bottom left"
+        backgoundText2Style="bottom-20  left"
         linkContent="Apply now through LinkedIn"
-        buttonLink=""
+        buttonLink="/"
         buttonWidth="w-40"
         buttonTitle="Apply now through LinkedIn"
         buttonImg={arrow}

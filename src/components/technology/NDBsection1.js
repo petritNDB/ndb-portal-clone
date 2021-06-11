@@ -7,16 +7,19 @@ import CustomButton from "../customButton"
 
 const NDBsection1 = ({
   backgoundText1,
-  backgoundText1Style,
   backgoundText2,
+  backgoundText3,
+  backgoundText1Style,
   backgoundText2Style,
+  backgoundText3Style,
   NDBSectionTitle,
   quote,
   quoteAuthor,
-  parag1,
-  parag2,
-  parag3,
-  paragOverQuote,
+  paragraphUnderQuote1,
+  paragraphUnderQuote2,
+  paragraphUnderQuote3,
+  paragraphOverQuote1,
+  paragraphOverQuote2,
   sectionPapper,
   // quoteImg,
   linkContent,
@@ -36,30 +39,40 @@ const NDBsection1 = ({
         <span className={`overlay2 ${backgoundText2Style}`}>
           {backgoundText2}
         </span>
+        <span className={`overlay2 ${backgoundText3Style}`}>
+          {backgoundText3}
+        </span>
         <Container>
           <span className="technology__section1-title">{NDBSectionTitle}</span>
-          <p className="section-content">{paragOverQuote}</p>
-          {quote ? (
+          {paragraphOverQuote1 && (
+            <p className="section-content">{paragraphOverQuote1}</p>
+          )}
+          {paragraphOverQuote2 && (
+            <p className="section-content">{paragraphOverQuote2}</p>
+          )}
+          {quote && (
             <div className="section-quote">
               <img src={quoteImg} />
               <img src={quoteImg} />
               <p>{quote}</p>
               <span className="quote-author">{quoteAuthor}</span>
             </div>
-          ) : (
-            ""
+          )}
+          {paragraphUnderQuote1 && (
+            <p className="section-content">{paragraphUnderQuote1}</p>
+          )}
+          {paragraphUnderQuote2 && (
+            <p className="section-content">{paragraphUnderQuote2}</p>
+          )}
+          {paragraphUnderQuote3 && (
+            <p className="section-content">{paragraphUnderQuote3}</p>
+          )}
+          {sectionPapper && (
+            <div className="section-image">
+              <img src={sectionPapper} />
+            </div>
           )}
 
-          <p className="section-content">{parag1}</p>
-          <p className="section-content">{parag2}</p>
-          <p className="section-content">{parag3}</p>
-          <div className="section-image">
-            <img src={sectionPapper} />
-          </div>
-          {/* <Link to="contact" className="banner__button">
-            <img src={arrow} alt="" />
-            <span>{linkContent}</span>
-          </Link> */}
           <CustomButton
             linkContent={linkContent}
             buttonLink={buttonLink}
