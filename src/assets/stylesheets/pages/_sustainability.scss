@@ -19,3 +19,20 @@
     }
   }
 }
+
+.sustain-challenge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: px2rem(85);
+  p {
+    font-size: px2rem(20);
+    line-height: px2rem(36);
+    text-align: justify;
+    max-width: 50%;
+    //  flex: 0.6
+  }
+  img {
+    //   flex: 0.4;
+  }
+}

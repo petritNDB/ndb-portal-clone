@@ -7,7 +7,19 @@ import backImg from "../assets/images/sustainability/headSwirl.svg"
 import arrow from "../assets/images/icons/arrow.png"
 import middleGridImg1 from "../assets/images/sustainability/middleGrid1.png"
 import middleGridImg2 from "../assets/images/sustainability/middleGrid2.png"
+import UNlogo from "../assets/images/sustainability/unLogo.png"
+import image1 from "../assets/images/sustainability/abstractColor.png"
+import image2 from "../assets/images/sustainability/leafHorizontal.png"
+import image3 from "../assets/images/sustainability/money.png"
+import image4 from "../assets/images/sustainability/heartHands.png"
+import vision1 from "../assets/images/sustainability/A.png"
+import vision2 from "../assets/images/sustainability/B.png"
+import vision3 from "../assets/images/sustainability/C.png"
+import vision4 from "../assets/images/sustainability/D.png"
 import NDBWrapper from "../components/wrapper"
+import Container from "../components/container"
+import CustomGrid from "../components/customGrid"
+import OurVision from "../components/ndb-vision/OurVision"
 
 const Sustain = () => {
   const data1 = {
@@ -49,6 +61,82 @@ const Sustain = () => {
     paragraphUnderQuote1:
       "NDB’s innovation challenge is a unique opportunity for young people who have great projects or ideas with a positive impact on global challenges, following the Sustainable development goals set by the UN. Because encouraging future generations to find innovative solutions that will build a more sustainable tomorrow is part of our DNA. If you know a young person who will be interested in participating in our Challenge, reach out to us.",
   }
+  const gridItems = [
+    {
+      title: "",
+      itemImg: image1,
+      content:
+        "We aim to protect the environment through activities that preserve biodiversity",
+    },
+    {
+      title: "",
+      itemImg: image2,
+      content:
+        "Social activities to actively preserve the environment, such as clean-up weeks, plastic removal, and more.",
+    },
+    {
+      title: "",
+      itemImg: image3,
+      content:
+        "NDB leads the formation of a circular economy valuing the recycling of waste, hazardous, non-hazardous, and eco-friendly materials.",
+    },
+    {
+      title: "",
+      itemImg: image4,
+      content:
+        "A mentorship program in a rural or in an underprivileged environment for society leaders who want to improve their economy and society from a green point of view. ",
+    },
+  ]
+  const data5 = {
+    backgoundText1: "compl-",
+    NDBSectionTitle: "Integrity and Standards",
+    paragraphUnderQuote1:
+      "NDB has implemented a unique compliance activities management method and program led by a Compliance Officer. The Compliance Officer oversights the activities and plans in accordance with the national and international compliance standards. ",
+    paragraphUnderQuote2:
+      "NDB’s compliance program selects themes following priority control targets, enabling our Legal Team to evaluate risk factors, new regulations and implementations. Our plan is also based on post-management monitoring, measuring and evaluating performances.",
+  }
+  const data6 = {
+    backgoundText1: "compl-",
+    NDBSectionTitle: "Integrity and Standards",
+    paragraphUnderQuote1:
+      "NDB has implemented a unique compliance activities management method and program led by a Compliance Officer. The Compliance Officer oversights the activities and plans in accordance with the national and international compliance standards. ",
+    paragraphUnderQuote2:
+      "NDB’s compliance program selects themes following priority control targets, enabling our Legal Team to evaluate risk factors, new regulations and implementations. Our plan is also based on post-management monitoring, measuring and evaluating performances.",
+  }
+  const data7 = {
+    backgoundText1: "iance",
+    NDBSectionTitle: "Compliance guidelines:",
+    paragraphUnderQuote1:
+      "NDB is a multinational company expanding and conducting businesses across the world. Through its “Compliance Report”, employees are able to conduct their work without violating applicable laws and regulations such as internal regulations and local laws.",
+  }
+
+  const cards = [
+    {
+      cardTitle: "",
+      cardContent: "Conduct yourself honestly and ethically",
+      // cardNumber: "1",
+      cardImage: vision1,
+    },
+    {
+      cardTitle: "",
+      cardContent: "Guidance to your daily activities within the workplace",
+      // cardNumber: "2",
+      cardImage: vision2,
+    },
+    {
+      cardTitle: "",
+      cardContent: "Understand what NDB expects from you.",
+      // cardNumber: "3",
+      cardImage: vision3,
+    },
+    {
+      cardTitle: "",
+      cardContent:
+        "Prevention of any unethical, inappropriate, or illegal behaviour from our workforce.",
+      // cardNumber: "4",
+      cardImage: vision4,
+    },
+  ]
   return (
     <Layout>
       <Seo title="Sustainability" />
@@ -134,6 +222,54 @@ const Sustain = () => {
         buttonLink="/contact"
         buttonWidth="w-40"
         buttonTitle="Contact us"
+        buttonImg={arrow}
+        // textAlign="text-center"
+        flex="flex-left"
+      />
+      <Container>
+        <div className="sustain-challenge">
+          <p>
+            The winner of our challenge will participate freely in our
+            innovation camp and receive a grant for the development of the
+            project.
+          </p>
+          <img src={UNlogo} alt="challenge winner" />
+        </div>
+      </Container>
+
+      <CustomGrid gridItems={gridItems} />
+
+      <NDBsection1
+        backgoundText1={data5.backgoundText1}
+        NDBSectionTitle={data5.NDBSectionTitle}
+        paragraphUnderQuote1={data5.paragraphUnderQuote1}
+        paragraphUnderQuote2={data5.paragraphUnderQuote2}
+        backgoundText1Style="top right"
+        // backgoundText3Style="right bottom"
+        buttonTitle="Download our Code of ethics"
+        buttonLink="/"
+        buttonWidth="w-40"
+        buttonImg={arrow}
+        textAlign="text-center"
+        flex="flex-center"
+      />
+      <OurVision cards={cards} visionTitle="How can the Code help you? " />
+      <NDBsection1
+        backgoundText1={data6.backgoundText1}
+        NDBSectionTitle={data6.NDBSectionTitle}
+        paragraphUnderQuote1={data6.paragraphUnderQuote1}
+        paragraphUnderQuote2={data6.paragraphUnderQuote2}
+        backgoundText1Style="top right"
+      />
+      <NDBsection1
+        backgoundText1={data7.backgoundText1}
+        NDBSectionTitle={data7.NDBSectionTitle}
+        paragraphUnderQuote1={data7.paragraphUnderQuote1}
+        backgoundText1Style="top left"
+        // backgoundText3Style="right bottom"
+        buttonTitle="Download our Compliance Report"
+        buttonLink="/"
+        buttonWidth="w-40"
         buttonImg={arrow}
         textAlign="text-center"
         flex="flex-center"
