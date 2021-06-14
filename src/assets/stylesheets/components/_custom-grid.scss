@@ -19,8 +19,16 @@
       color: $white;
       line-height: 33px;
     }
-    .title,.content{
-       width: 60%;
+    .title,
+    .content {
+      width: 60%;
     }
+  }
+  &__title {
+    font-size: px2rem(36);
+    font-weight: $semibold-font-weight;
+    line-height: px2rem(44);
+    margin: 100px auto;
+    text-align: center;
   }
 }

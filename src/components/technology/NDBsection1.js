@@ -29,6 +29,7 @@ const NDBsection1 = ({
   buttonImg,
   textAlign,
   flex,
+  margin,
 }) => {
   return (
     <NDBWrapper>
@@ -81,6 +82,7 @@ const NDBsection1 = ({
             buttonImg={buttonImg}
             textAlign={textAlign}
             flex={flex}
+            margin={margin}
           />
         </Container>
       </div>

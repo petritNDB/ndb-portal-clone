@@ -30,6 +30,16 @@ body {
   }
 }
 
+.overlay1,
+.overlay2 {
+  position: absolute;
+  font-size: 180px;
+  font-weight: $bold-font-weight;
+  text-transform: uppercase;
+  color: rgba($color: #000000, $alpha: 4%);
+}
+
+
 .left {
   left: 0;
 }
@@ -44,7 +54,7 @@ body {
 }
 .middle {
   top: 50%;
-  transform: translateY(-50%);
+  // transform: translateY(-50%);
 }
 .top {
   top: 0;
@@ -92,6 +102,18 @@ body {
 }
 .text-center {
   text-align: center;
+}
+.text-black {
+  color: $text-color !important;
+}
+.text-white {
+  color: $white;
+}
+.m-20 {
+  margin: px2rem(20);
+}
+.mt-100 {
+  margin-top: px2rem(100);
 }
 // .w-40{
 //    max-width: 40%;

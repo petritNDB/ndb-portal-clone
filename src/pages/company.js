@@ -187,7 +187,9 @@ const Company = () => {
         backgoundText1Style="top left"
       />
       <FindUs />
+
       <OurVision cards={cards} visionTitle="Our Vision" />
+      
       <NDBWrapper fullWidth>
         <div className="bulb-section">
           <img src={bulb} alt="" className="overlay top left" />

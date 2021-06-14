@@ -16,6 +16,10 @@ import vision1 from "../assets/images/sustainability/A.png"
 import vision2 from "../assets/images/sustainability/B.png"
 import vision3 from "../assets/images/sustainability/C.png"
 import vision4 from "../assets/images/sustainability/D.png"
+import grid1 from "../assets/images/sustainability/grid1.png"
+import grid2 from "../assets/images/sustainability/grid2.png"
+import grid3 from "../assets/images/sustainability/grid3.png"
+import grid4 from "../assets/images/sustainability/grid4.png"
 import NDBWrapper from "../components/wrapper"
 import Container from "../components/container"
 import CustomGrid from "../components/customGrid"
@@ -61,39 +65,14 @@ const Sustain = () => {
     paragraphUnderQuote1:
       "NDB’s innovation challenge is a unique opportunity for young people who have great projects or ideas with a positive impact on global challenges, following the Sustainable development goals set by the UN. Because encouraging future generations to find innovative solutions that will build a more sustainable tomorrow is part of our DNA. If you know a young person who will be interested in participating in our Challenge, reach out to us.",
   }
-  const gridItems = [
-    {
-      title: "",
-      itemImg: image1,
-      content:
-        "We aim to protect the environment through activities that preserve biodiversity",
-    },
-    {
-      title: "",
-      itemImg: image2,
-      content:
-        "Social activities to actively preserve the environment, such as clean-up weeks, plastic removal, and more.",
-    },
-    {
-      title: "",
-      itemImg: image3,
-      content:
-        "NDB leads the formation of a circular economy valuing the recycling of waste, hazardous, non-hazardous, and eco-friendly materials.",
-    },
-    {
-      title: "",
-      itemImg: image4,
-      content:
-        "A mentorship program in a rural or in an underprivileged environment for society leaders who want to improve their economy and society from a green point of view. ",
-    },
-  ]
+
   const data5 = {
-    backgoundText1: "compl-",
-    NDBSectionTitle: "Integrity and Standards",
+    backgoundText1: "ethics",
+    NDBSectionTitle: "Code of Conduct",
     paragraphUnderQuote1:
-      "NDB has implemented a unique compliance activities management method and program led by a Compliance Officer. The Compliance Officer oversights the activities and plans in accordance with the national and international compliance standards. ",
+      "NDB’s Code of Conduct is one of the ways we apply NDB’s values into practice. Our Code of Conduct recognizes that every activity we perform will be, and should be, measured against the highest possible standards of ethical business conduct.",
     paragraphUnderQuote2:
-      "NDB’s compliance program selects themes following priority control targets, enabling our Legal Team to evaluate risk factors, new regulations and implementations. Our plan is also based on post-management monitoring, measuring and evaluating performances.",
+      "We expect all of our employees and Board members to know and follow our Code of Conduct. Failure to do so can be sanctioned with disciplinary action, including termination of employment. We expect our extended workforce (temps, vendors, and independent contractors) and others who may be temporarily assigned to perform work or services for NDB to follow our Code of Conduct. ",
   }
   const data6 = {
     backgoundText1: "compl-",
@@ -109,8 +88,7 @@ const Sustain = () => {
     paragraphUnderQuote1:
       "NDB is a multinational company expanding and conducting businesses across the world. Through its “Compliance Report”, employees are able to conduct their work without violating applicable laws and regulations such as internal regulations and local laws.",
   }
-
-  const cards = [
+  const cards1 = [
     {
       cardTitle: "",
       cardContent: "Conduct yourself honestly and ethically",
@@ -137,6 +115,63 @@ const Sustain = () => {
       cardImage: vision4,
     },
   ]
+  const gridItems = [
+    {
+      title: "",
+      itemImg: image1,
+      content:
+        "We aim to protect the environment through activities that preserve biodiversity",
+    },
+    {
+      title: "",
+      itemImg: image2,
+      content:
+        "Social activities to actively preserve the environment, such as clean-up weeks, plastic removal, and more.",
+    },
+    {
+      title: "",
+      itemImg: image3,
+      content:
+        "NDB leads the formation of a circular economy valuing the recycling of waste, hazardous, non-hazardous, and eco-friendly materials.",
+    },
+    {
+      title: "",
+      itemImg: image4,
+      content:
+        "A mentorship program in a rural or in an underprivileged environment for society leaders who want to improve their economy and society from a green point of view. ",
+    },
+  ]
+  const cards2 = [
+    {
+      cardTitle: "",
+      cardContent:
+        "Developing innovations that will have a limited impact on our environment during the life cycle of our products.",
+      // cardNumber: "1",
+      cardImage: grid1,
+    },
+    {
+      cardTitle: "",
+      cardContent:
+        "Ensuring our products and operations comply or exceed local, national and international environmental requirements.",
+      // cardNumber: "2",
+      cardImage: grid2,
+    },
+    {
+      cardTitle: "",
+      cardContent:
+        "Practicing eco-friendly management and implementing processes that allow the efficient use of our resources.",
+      // cardNumber: "3",
+      cardImage: grid3,
+    },
+    {
+      cardTitle: "",
+      cardContent:
+        "Offering a workplace that protects the safety and health of our employees.",
+      // cardNumber: "4",
+      cardImage: grid4,
+    },
+  ]
+
   return (
     <Layout>
       <Seo title="Sustainability" />
@@ -147,7 +182,6 @@ const Sustain = () => {
         bannerLink="/career"
         bannerDesc="SUSTAINABILITY "
       />
-
       <NDBsection1
         backgoundText1={data1.backgoundText1}
         backgoundText2={data1.backgoundText2}
@@ -162,10 +196,11 @@ const Sustain = () => {
         // backgoundText3Style="right bottom"
         buttonTitle="Download our Sustainability Strategy"
         buttonLink="/"
-        buttonWidth="w-40"
+        buttonWidth="w-50"
         buttonImg={arrow}
         textAlign="text-center"
         flex="flex-center"
+        margin="mt-100"
       />
       <NDBsection1
         backgoundText1={data2.backgoundText1}
@@ -179,6 +214,15 @@ const Sustain = () => {
         backgoundText1Style="top right"
         backgoundText2Style="left bottom-20"
         // backgoundText3Style="right bottom"
+      />
+      <OurVision
+        cards={cards2}
+        visionTitle="Our Commitments"
+        backgoundText1="safety"
+        backgoundText2="manag-"
+        backgoundText1Style="top right"
+        backgoundText2Style="bottom left"
+        margin="mt-100"
       />
       <NDBsection1
         backgoundText1={data3.backgoundText1}
@@ -236,9 +280,11 @@ const Sustain = () => {
           <img src={UNlogo} alt="challenge winner" />
         </div>
       </Container>
-
-      <CustomGrid gridItems={gridItems} />
-
+      <CustomGrid
+        gridItems={gridItems}
+        gridTitle="Green & Energy: Green ecology & economy
+"
+      />
       <NDBsection1
         backgoundText1={data5.backgoundText1}
         NDBSectionTitle={data5.NDBSectionTitle}
@@ -253,7 +299,45 @@ const Sustain = () => {
         textAlign="text-center"
         flex="flex-center"
       />
-      <OurVision cards={cards} visionTitle="How can the Code help you? " />
+      {/* <OurVision
+        cards={cards1}
+        visionTitle="How can the Code help you? "
+        color="text-black"
+        page="sustain"
+        margin="mt-100"
+      /> */}
+
+      <NDBWrapper fullWidth>
+        <div className="vision mt-100">
+          <p className="vision-title">How can the Code help you?</p>
+          <div className="ndb-vision">
+            {cards1.map((card, index) => {
+              const alternatingColors = ["#ffffff", "#000000"]
+              const { cardTitle, cardImage, cardContent } = card
+              return (
+                <div className={`ndb-vision__card `} key={index}>
+                  <img
+                    src={cardImage}
+                    className="card-image overlay"
+                    alt="card"
+                  />
+                  {cardTitle !== "" && (
+                    <p className="card-title">{cardTitle}</p>
+                  )}
+
+                  <p
+                    className="card-content-custom m-20"
+                    style={{ color: alternatingColors[index % 3] }}
+                  >
+                    {cardContent}
+                  </p>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </NDBWrapper>
+
       <NDBsection1
         backgoundText1={data6.backgoundText1}
         NDBSectionTitle={data6.NDBSectionTitle}

@@ -10,11 +10,12 @@ const CustomButton = ({
   buttonWidth,
   buttonTextOrder,
   flex,
+  margin,
 }) => {
   return (
     // max-width: 40%;
     //  margin: 70px auto;
-    <div className={`c-button ${flex} `}>
+    <div className={`c-button ${flex} ${margin} `}>
       <Link to={buttonLink} className={`c-button__link ${buttonWidth}`}>
         {buttonImg ? (
           <img
