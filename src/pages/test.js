@@ -1,17 +1,10 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import Form from '../components/form/Form'
 
-const ComponentName = ({ data }) => <pre>{JSON.stringify(data, null, 4)}</pre>
+const test = () => {
+  return (
+    <Form/>
+  )
+}
 
-export const query = graphql`
-  {
-    allFile {
-      nodes {
-        relativePath
-        name
-      }
-    }
-  }
-`
-
-export default ComponentName
+export default test

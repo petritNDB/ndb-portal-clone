@@ -98,6 +98,7 @@ const careers = () => {
         pageName="careers"
         backImg={backImg}
         bannerLinkName="About us"
+        bannerLink="/company"
         bannerDesc="“Our unity is our strength, our diversity is our power”"
       />
       <NDBsection1
