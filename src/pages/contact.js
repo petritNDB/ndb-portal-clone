@@ -3,7 +3,7 @@ import Banner from "../components/banner"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import backImg from "../assets/images/contact/bannerSwirl.png"
-import NDBWrapper from "../components/wrapper"
+// import NDBWrapper from "../components/wrapper"
 import Accordion from "../components/accordion/Accordion"
 import Form from "../components/form/Form"
 import { contactData1, contactData2 } from "../components/accordion/Data"
@@ -21,7 +21,7 @@ const Contact = () => {
         bannerDesc="GET TO KNOW US"
       />
 
-      <NDBWrapper>
+      {/* <NDBWrapper> */}
         <Accordion
           accordionTitle="Contact us"
           data={contactData1}
@@ -34,7 +34,7 @@ const Contact = () => {
           margin="mt-100"
           title="Let's talk"
         />
-      </NDBWrapper>
+      {/* </NDBWrapper> */}
     </Layout>
   )
 }

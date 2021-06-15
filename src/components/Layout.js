@@ -5,7 +5,6 @@ import "../assets/stylesheets/main.scss"
 
 // import Banner from "components/Banner"
 import Footer from "./footer"
-import NDBWrapper from "./wrapper"
 
 const Layout = ({ children, pageName }) => {
   let className = ""

@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import React from "react"
 import Container from "../container"
 import NDBWrapper from "../wrapper"
@@ -46,27 +46,45 @@ const NDBsection1 = ({
         <Container>
           <span className="technology__section1-title">{NDBSectionTitle}</span>
           {paragraphOverQuote1 && (
-            <p className="section-content">{paragraphOverQuote1}</p>
+            <p
+              className={`section-content ${margin ? margin : ""} ${
+                textAlign ? textAlign : ""
+              }`}
+            >
+              {paragraphOverQuote1}
+            </p>
           )}
           {paragraphOverQuote2 && (
-            <p className="section-content">{paragraphOverQuote2}</p>
+            <p
+              className={`section-content ${margin ? margin : ""} ${
+                textAlign ? textAlign : ""
+              }`}
+            >
+              {paragraphOverQuote2}
+            </p>
           )}
           {quote && (
             <div className="section-quote">
-              <img src={quoteImg} />
-              <img src={quoteImg} />
+              <img src={quoteImg} alt="section quote" />
+              <img src={quoteImg} alt="section quote" />
               <p>{quote}</p>
               <span className="quote-author">{quoteAuthor}</span>
             </div>
           )}
           {paragraphUnderQuote1 && (
-            <p className="section-content">{paragraphUnderQuote1}</p>
+            <p className={`section-content ${textAlign ? textAlign : ""}`}>
+              {paragraphUnderQuote1}
+            </p>
           )}
           {paragraphUnderQuote2 && (
-            <p className="section-content">{paragraphUnderQuote2}</p>
+            <p className={`section-content ${textAlign ? textAlign : ""}`}>
+              {paragraphUnderQuote2}
+            </p>
           )}
           {paragraphUnderQuote3 && (
-            <p className="section-content">{paragraphUnderQuote3}</p>
+            <p className={`section-content ${textAlign ? textAlign : ""}`}>
+              {paragraphUnderQuote3}
+            </p>
           )}
           {sectionPapper && (
             <div className="section-image">

@@ -54,3 +54,41 @@ export const contactData2 = [
       "The solution, NDB, requires in-depth knowledge of its base material, diamond, to develop in comparison to the current workaround, Li-ion. The field is very small, thus there were fewer individuals working to develop it before. In addition, this technology was made possible due to the improvement of the nano-fabrication techniques such as Chemical Vapour Deposition (CVD) and metallization, which were previously unavailable. The current workaround, Li-ion, has somewhat addressed the problem, but not to the degree required for satisfying the goal set by the international community. The base material for Li-ion is toxic and has many limitations that consumers are not currently facing.",
   },
 ]
+export const InvestorsData = [
+  {
+    title: "Ambition",
+    content:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae cum repellendus soluta iusto vero. Saepe nihil ab aliquid eius asperiores.",
+  },
+  {
+    title: "Technology leadership",
+    content:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae cum repellendus soluta iusto vero. Saepe nihil ab aliquid eius asperiores.",
+  },
+  {
+    title: "Diversity",
+    content:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae cum repellendus soluta iusto vero. Saepe nihil ab aliquid eius asperiores.",
+  },
+  {
+    title:
+      "Achievement driven/Results-oriented/Achievement-oriented/Innovation- driven",
+    content:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae cum repellendus soluta iusto vero. Saepe nihil ab aliquid eius asperiores.",
+  },
+  {
+    title: "Freespeech",
+    content:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae cum repellendus soluta iusto vero. Saepe nihil ab aliquid eius asperiores.",
+  },
+  {
+    title: "Collaborative/Collaboration/Teamwork",
+    content:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae cum repellendus soluta iusto vero. Saepe nihil ab aliquid eius asperiores.",
+  },
+  {
+    title: "Entrepreneurship",
+    content:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae cum repellendus soluta iusto vero. Saepe nihil ab aliquid eius asperiores.",
+  },
+]

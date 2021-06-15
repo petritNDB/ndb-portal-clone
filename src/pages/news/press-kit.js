@@ -4,7 +4,7 @@ import { PressKitData } from "../../components/news/Data"
 import backImg from "../../assets/images/news/headSwirlKit.svg"
 import Seo from "../../components/seo"
 import Banner from "../../components/banner"
-import NDBWrapper from "../../components/wrapper"
+// import NDBWrapper from "../../components/wrapper"
 import Layout from "../../components/layout"
 import Form from "../../components/form/Form"
 
@@ -19,14 +19,14 @@ const PressKit = () => {
         backImg={backImg}
         // bannerDesc="GET TO KNOW US"
       />
-      <NDBWrapper>
+      {/* <NDBWrapper> */}
         <Accordion
           accordionTitle="Press Kit"
           data={PressKitData}
           margin="mt-100"
         />
-        <Form type="news-kit" title="Enquiry" />
-      </NDBWrapper>
+        <Form pageType="news-kit" title="Enquiry" />
+      {/* </NDBWrapper> */}
     </Layout>
   )
 }

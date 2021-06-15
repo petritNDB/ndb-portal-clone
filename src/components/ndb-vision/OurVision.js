@@ -34,11 +34,8 @@ const OurVision = ({
               backgoundText1Style,
               backgoundText2Style,
               cardTitle,
-              cardNumber,
               cardImage,
               cardContent,
-              span,
-              bold,
             } = card
             {
               return (
@@ -48,7 +45,6 @@ const OurVision = ({
                     className="card-image overlay"
                     alt="card"
                   />
-                  {/* <p className="card-number">{cardNumber}</p> */}
                   {cardTitle !== "" && (
                     <p className="card-title">{cardTitle}</p>
                   )}

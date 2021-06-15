@@ -23,6 +23,13 @@
     .content {
       width: 60%;
     }
+    .title {
+      font-size: px2rem(24);
+      font-weight: $semibold-font-weight;
+      line-height: px2rem(30);
+      margin: 10px auto;
+      // text-align: center;
+    }
   }
   &__title {
     font-size: px2rem(36);

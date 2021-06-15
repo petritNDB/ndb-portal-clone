@@ -213,6 +213,7 @@ const Sustain = () => {
         paragraphUnderQuote1={data2.paragraphUnderQuote1}
         backgoundText1Style="top right"
         backgoundText2Style="left bottom-20"
+        buttonLink="#"
         // backgoundText3Style="right bottom"
       />
       <OurVision
@@ -235,6 +236,7 @@ const Sustain = () => {
         paragraphUnderQuote1={data3.paragraphUnderQuote1}
         backgoundText1Style="top right"
         backgoundText2Style="left bottom"
+        buttonLink="#"
         // backgoundText3Style="right bottom"
       />
       <NDBWrapper>
@@ -263,7 +265,7 @@ const Sustain = () => {
         paragraphUnderQuote1={data4.paragraphUnderQuote1}
         backgoundText1Style="top right"
         linkContent="PETRIT"
-        buttonLink="/contact"
+        buttonLink="/contact/"
         buttonWidth="w-40"
         buttonTitle="Contact us"
         buttonImg={arrow}
@@ -282,8 +284,7 @@ const Sustain = () => {
       </Container>
       <CustomGrid
         gridItems={gridItems}
-        gridTitle="Green & Energy: Green ecology & economy
-"
+        gridTitle="Green & Energy: Green ecology & economy"
       />
       <NDBsection1
         backgoundText1={data5.backgoundText1}

@@ -17,6 +17,10 @@
       grid-column: auto / span 2;
       line-height: 25px;
     }
+  }
+  &__item2 {
+    display: flex;
+    justify-content: space-between;
     & .column > label > input[type="checkbox"] {
       // display: inline-block;
       // width: auto;

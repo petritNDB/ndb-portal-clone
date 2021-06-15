@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
-import { Data } from "./Data"
 import openIcon from "../../assets/images/icons/plusIcon.png"
+import NDBWrapper from "../wrapper"
 
 const Accordion = ({ data, accordionTitle, margin }) => {
   const [clicked, setClicked] = useState(false)
@@ -20,40 +20,43 @@ const Accordion = ({ data, accordionTitle, margin }) => {
   //     animationFillMode: "forwards",
   //   }
   return (
-    
-    <div className={`accordion-section ${margin}`}>
-      <p className="accordion-title">{accordionTitle}</p>
-      {data.map((item, index) => {
-        return (
-          <>
-            <div className="accordion-section__item" key={index}>
-              <div
-                className={`accordion-section__title ${
-                  clicked === index ? "is-active" : ""
-                }`}
-                onClick={() => toggle(index)}
-                //  key={index}
-              >
-                <p>{item.title}</p>
-                <img
-                  src={openIcon}
-                  className={`title-icon ${clicked === index ? " rotate" : ""}`}
-                  alt=""
-                />
-              </div>
-              {clicked === index ? (
+    <NDBWrapper>
+      <div className={`accordion-section ${margin}`}>
+        <p className="accordion-title">{accordionTitle}</p>
+        {data.map((item, index) => {
+          return (
+            <>
+              <div className="accordion-section__item" key={index}>
                 <div
-                  className="accordion-section__content"
-                  style={clicked === index && mountedStyle}
+                  className={`accordion-section__title ${
+                    clicked === index ? "is-active" : ""
+                  }`}
+                  onClick={() => toggle(index)}
+                  //  key={index}
                 >
-                  {item.content}
+                  <p>{item.title}</p>
+                  <img
+                    src={openIcon}
+                    className={`title-icon ${
+                      clicked === index ? " rotate" : ""
+                    }`}
+                    alt=""
+                  />
                 </div>
-              ) : null}
-            </div>
-          </>
-        )
-      })}
-    </div>
+                {clicked === index ? (
+                  <div
+                    className="accordion-section__content"
+                    style={clicked === index && mountedStyle}
+                  >
+                    {item.content}
+                  </div>
+                ) : null}
+              </div>
+            </>
+          )
+        })}
+      </div>
+    </NDBWrapper>
   )
 }
 

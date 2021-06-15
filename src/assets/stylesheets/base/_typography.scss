@@ -111,7 +111,7 @@ body {
   max-width: 20%;
 }
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
 .text-black {
   color: $text-color !important;
@@ -124,6 +124,9 @@ body {
 }
 .mt-100 {
   margin-top: px2rem(100);
+}
+.mb-100 {
+  margin-bottom: px2rem(100) !important;
 }
 // .w-40{
 //    max-width: 40%;

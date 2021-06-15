@@ -103,6 +103,7 @@ const careers = () => {
       />
       <NDBsection1
         backgoundText1={data1.backgoundText1}
+        buttonLink="#"
         NDBSectionTitle={data1.NDBSectionTitle}
         quote={data1.quote}
         paragraphUnderQuote1={data1.paragraphUnderQuote1}

@@ -1,6 +1,5 @@
 import React from "react"
 
-import Container from "./container"
 import Navbar from "./navbar"
 import { Link } from "gatsby"
 import NDBWrapper from "./wrapper"
@@ -27,7 +26,7 @@ const Banner = ({
         {/* <div className="banner"> */}
         <div className="banner__left">
           <Link to="/">
-            <img src={logo} alt="" />
+            <img src={logo} alt="site icon" />
           </Link>{" "}
           <img
             src={backImg}

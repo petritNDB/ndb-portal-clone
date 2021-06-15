@@ -31,7 +31,10 @@ const CustomButton = ({
           <p className={`c-button__name ${textAlign}`}>{buttonTitle}</p>
         </button>
       ) : (
-        <Link to={buttonLink} className={`c-button__link ${buttonWidth}`}>
+        <Link
+          to={buttonLink ? buttonLink : "#"}
+          className={`c-button__link ${buttonWidth}`}
+        >
           {buttonImg ? (
             <img
               src={buttonImg}
