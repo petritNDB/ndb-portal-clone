@@ -6,7 +6,7 @@ import countries from "./countries"
 import arrow from "../../assets/images/icons/arrow.svg"
 import NDBWrapper from "../wrapper"
 
-const Form = () => {
+const Form = ({ type, title }) => {
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
   const [email, setEmail] = useState("")
@@ -15,8 +15,14 @@ const Form = () => {
   const [country, setCountry] = useState("")
   const [relationship, setRelationship] = useState("")
   const [message, setMessage] = useState("")
+  const [purpose, setPurpose] = useState("")
+  const [company, setCompany] = useState("")
   const [acceptedTerms, setAcceptedTerms] = useState(false)
 
+  const flexDisplay = {
+    display: "flex !important",
+    justifyContent: "space-between",
+  }
   const handleSubmit = event => {
     console.log(`
       First Name:${firstName},
@@ -36,7 +42,7 @@ const Form = () => {
   return (
     //  <NDBWrapper>
     <form className="form-section" onSubmit={handleSubmit}>
-      <h1>Let’s talk</h1>
+      <h1>{title}</h1>
       <div className="form-section__item">
         {" "}
         <input
@@ -69,10 +75,14 @@ const Form = () => {
         <input
           name="linkedin"
           type="text"
-          value={linkedin}
-          onChange={e => setLinkedin(e.target.value)}
+          value={type === "news-kit" ? company : linkedin}
+          onChange={
+            type === "news-kit"
+              ? e => setCompany(e.target.value)
+              : e => setLinkedin(e.target.value)
+          }
           required
-          placeholder="Linkedin"
+          placeholder={type === "news-kit" ? "Company" : "Linkedin"}
         />
       </div>
       <div className="form-section__item">
@@ -99,35 +109,145 @@ const Form = () => {
           placeholder="Phone Number"
         />
       </div>
-      <div className="form-section__item">
-        <select
-          className="w-100"
-          name="relationship"
-          value={country}
-          onChange={e => setCountry(e.target.value)}
-          required
-          placeholder="Intended Relationship"
-          id="relationship"
+      {type === "news-kit" ? (
+        <div
+          className="form-section__item "
+          style={type === "news-kit" ? flexDisplay : ""}
         >
-          <option value="" disabled selected hidden>
-            Inteded Relationship
-          </option>
-          <option key="" />
-          {countries.map(country => (
-            <option key={country}>{country}</option>
-          ))}
-        </select>
-      </div>
+          <div className="column">
+            <label className="span-column-2">
+              <input
+                name="acceptedTerms"
+                type="checkbox"
+                onChange={e => setAcceptedTerms(e.target.value)}
+                required
+              />
+              Company Profile
+            </label>
+            <label className="span-column-2">
+              <input
+                name="acceptedTerms"
+                type="checkbox"
+                onChange={e => setAcceptedTerms(e.target.value)}
+                required
+              />
+              Human Rights
+            </label>
+            <label className="span-column-2">
+              <input
+                name="acceptedTerms"
+                type="checkbox"
+                onChange={e => setAcceptedTerms(e.target.value)}
+                required
+              />
+              NDB’s Logo
+            </label>
+          </div>
+          <div className="column">
+            <label className="span-column-2">
+              <input
+                name="acceptedTerms"
+                type="checkbox"
+                onChange={e => setAcceptedTerms(e.target.value)}
+                required
+              />
+              Gallery
+            </label>
+            <label className="span-column-2">
+              <input
+                name="acceptedTerms"
+                type="checkbox"
+                onChange={e => setAcceptedTerms(e.target.value)}
+                required
+              />
+              Press Release
+            </label>
+            <label className="span-column-2">
+              <input
+                name="acceptedTerms"
+                type="checkbox"
+                onChange={e => setAcceptedTerms(e.target.value)}
+                required
+              />
+              Code of conduct and business ethics
+            </label>
+          </div>
+          <div className="column">
+            <label className="span-column-2">
+              <input
+                name="acceptedTerms"
+                type="checkbox"
+                onChange={e => setAcceptedTerms(e.target.value)}
+                required
+              />
+              EH&S strategy
+            </label>
+            <label className="span-column-2">
+              <input
+                name="acceptedTerms"
+                type="checkbox"
+                onChange={e => setAcceptedTerms(e.target.value)}
+                required
+              />
+              Compliance report
+            </label>
+          </div>
+          <div className="column">
+            <label className="span-column-2">
+              <input
+                name="acceptedTerms"
+                type="checkbox"
+                onChange={e => setAcceptedTerms(e.target.value)}
+                required
+              />
+              Climate change response
+            </label>
+            <label className="span-column-2">
+              <input
+                name="acceptedTerms"
+                type="checkbox"
+                onChange={e => setAcceptedTerms(e.target.value)}
+                required
+              />
+              Responsible Sourcing Policy
+            </label>
+          </div>
+        </div>
+      ) : (
+        <div className="form-section__item">
+          <select
+            className="w-100"
+            name="relationship"
+            value={country}
+            onChange={e => setRelationship(e.target.value)}
+            required
+            placeholder="Intended Relationship"
+            id="relationship"
+          >
+            <option value="" disabled selected hidden>
+              Inteded Relationship
+            </option>
+            <option key="" />
+            {countries.map(country => (
+              <option key={country}>{country}</option>
+            ))}
+          </select>
+        </div>
+      )}
       <div className="form-section__item">
         <textarea
           className="w-100"
-          name="message"
+          name={type === "news-kit" ? "purpose" : "message"}
           cols="30"
           rows="10"
-          value={message}
-          onChange={e => setMessage(e.target.value)}
+          value={type === "news-kit" ? purpose : message}
+          onChange={
+            type === "news-kit"
+              ? e => setPurpose(e.target.value)
+              : e => setMessage(e.target.value)
+          }
           id="message"
-          placeholder="Message"
+          placeholder={type === "news-kit" ? "Purpose" : "Message"}
         ></textarea>
         {/* <input
             type="text"

@@ -20,6 +20,7 @@ const Accordion = ({ data, accordionTitle, margin }) => {
   //     animationFillMode: "forwards",
   //   }
   return (
+    
     <div className={`accordion-section ${margin}`}>
       <p className="accordion-title">{accordionTitle}</p>
       {data.map((item, index) => {

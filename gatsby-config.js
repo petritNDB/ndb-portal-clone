@@ -8,9 +8,8 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
+    `gatsby-plugin-gatsby-cloud`,
     // "gatsby-plugin-resolve-src",
     {
       resolve: `gatsby-source-filesystem`,
@@ -19,10 +18,18 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-
-    `gatsby-plugin-gatsby-cloud`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        icon: "src/assets/images/logo.svg",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: "src/assets/images/logo.svg",
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

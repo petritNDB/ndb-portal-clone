@@ -85,6 +85,10 @@ body {
   display: flex;
   flex-direction: column;
 }
+.row {
+  display: flex !important;
+  justify-content: space-between;
+}
 .order-1 {
   order: 1;
 }

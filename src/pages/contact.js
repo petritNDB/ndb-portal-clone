@@ -32,6 +32,7 @@ const Contact = () => {
           data={contactData2}
           accordionTitle="Learn more about us FAQ"
           margin="mt-100"
+          title="Let's talk"
         />
       </NDBWrapper>
     </Layout>

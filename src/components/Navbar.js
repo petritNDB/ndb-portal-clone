@@ -22,35 +22,35 @@ const Navbar = () => {
         Home{" "}
         <img src={navArrow} className="nav-link__arrow" alt="nav link icon" />{" "}
       </Link>
-      <Link to="/company" className="nav-link" onLoad={handleClick}>
+      <Link to="/company/" className="nav-link" onLoad={handleClick}>
         Company{" "}
         <img src={navArrow} className="nav-link__arrow" alt="nav link icon" />{" "}
       </Link>
-      <Link to="/sustain" className="nav-link" onLoad={handleClick}>
+      <Link to="/sustain/" className="nav-link" onLoad={handleClick}>
         Sustainability{" "}
         <img src={navArrow} className="nav-link__arrow" alt="nav link icon" />{" "}
       </Link>
-      <Link to="/technology" className="nav-link" onLoad={handleClick}>
+      <Link to="/technology/" className="nav-link" onLoad={handleClick}>
         Technology{" "}
         <img src={navArrow} className="nav-link__arrow" alt="nav link icon" />{" "}
       </Link>
-      <Link to="/investors" className="nav-link" onLoad={handleClick}>
+      <Link to="/investors/" className="nav-link" onLoad={handleClick}>
         Investors{" "}
         <img src={navArrow} className="nav-link__arrow" alt="nav link icon" />{" "}
       </Link>
-      <Link to="/news" className="nav-link" onLoad={handleClick}>
+      <Link to="/news/" className="nav-link" onLoad={handleClick}>
         News{" "}
         <img src={navArrow} className="nav-link__arrow" alt="nav link icon" />{" "}
       </Link>
-      <Link to="/careers" className="nav-link" onLoad={handleClick}>
+      <Link to="/careers/" className="nav-link" onLoad={handleClick}>
         Careers{" "}
         <img src={navArrow} className="nav-link__arrow" alt="nav link icon" />{" "}
       </Link>
-      <Link to="/contact" className="nav-link" onLoad={handleClick}>
+      <Link to="/contact/" className="nav-link" onLoad={handleClick}>
         Contact{" "}
         <img src={navArrow} className="nav-link__arrow" alt="nav link icon" />{" "}
       </Link>
-      <Link to="/shop" className="nav-link" onLoad={handleClick}>
+      <Link to="/shop/" className="nav-link" onLoad={handleClick}>
         Shop{" "}
         <img src={navArrow} className="nav-link__arrow" alt="nav link icon" />{" "}
       </Link>
