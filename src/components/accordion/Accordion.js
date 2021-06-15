@@ -22,7 +22,7 @@ const Accordion = ({ data, accordionTitle, margin }) => {
   return (
     <div className={`accordion-section ${margin}`}>
       <p className="accordion-title">{accordionTitle}</p>
-      {Data.map((item, index) => {
+      {data.map((item, index) => {
         return (
           <>
             <div className="accordion-section__item" key={index}>

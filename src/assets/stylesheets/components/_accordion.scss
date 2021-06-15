@@ -11,7 +11,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  
+
   &__item {
     //  background: red;
     margin: 0.5rem auto;
@@ -28,15 +28,19 @@
     color: $black-faded;
     border-top: 1px solid $black-faded;
     cursor: pointer;
+    p {
+      max-width: 80%;
+    }
     .title-icon {
       transition: all 0.3s;
     }
   }
   &__content {
-    border: 1px solid green;
+    // border: 1px solid green;
     font-size: px2rem(20);
     line-height: px2rem(33);
     transition: all 0.3s;
+    max-width: 90%
   }
 }
 .is-active {
