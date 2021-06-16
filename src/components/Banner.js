@@ -12,6 +12,7 @@ const Banner = ({
   bannerLink,
   bannerDesc,
   bannerLinkName,
+  width,
 }) => {
   let className = ""
 
@@ -21,7 +22,7 @@ const Banner = ({
 
   return (
     // <Container>
-    <NDBWrapper>
+    <NDBWrapper fullWidth={width ? width : ""}>
       <div className={className}>
         {/* <div className="banner"> */}
         <div className="banner__left">
@@ -33,7 +34,7 @@ const Banner = ({
             className="banner__overlay"
             alt="banner background "
           />
-          <p className="banner__description">{bannerDesc}</p>
+          <p className={`banner__description ${pageName==="home"?"home__banner-desc":""}`}>{bannerDesc}</p>
           <Link to={bannerLink} className="banner__button">
             <img src={arrow} alt="" />
             <span>{bannerLinkName}</span>

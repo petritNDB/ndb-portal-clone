@@ -12,6 +12,7 @@ const CustomButton = ({
   flex,
   margin,
   buttonType,
+  pageName,
 }) => {
   return (
     // max-width: 40%;
@@ -28,7 +29,13 @@ const CustomButton = ({
           ) : (
             ""
           )}
-          <p className={`c-button__name ${textAlign}`}>{buttonTitle}</p>
+          <p
+            className={`c-button__name ${textAlign} ${
+              pageName === "home" ? "bold-30" : ""
+            }`}
+          >
+            {buttonTitle}
+          </p>
         </button>
       ) : (
         <Link

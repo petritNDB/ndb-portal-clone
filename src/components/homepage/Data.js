@@ -1,0 +1,18 @@
+export const partnerImages = [
+  { image: "../../assets/images/partnersLogos/dailyMail.png" },
+  { image: "../../assets/images/partnersLogos/yahoo.png" },
+  { image: "../../assets/images/partnersLogos/techCrunch.png" },
+  { image: "../../assets/images/partnersLogos/forbes.png" },
+  { image: "../../assets/images/partnersLogos/bbc.png" },
+  { image: "../../assets/images/partnersLogos/orf.png" },
+  { image: "../../assets/images/partnersLogos/techTimes.png" },
+  { image: "../../assets/images/partnersLogos/fattoQuotidiano.png" },
+  { image: "../../assets/images/partnersLogos/medium.png" },
+  { image: "../../assets/images/partnersLogos/syfy.png" },
+  { image: "../../assets/images/partnersLogos/theScienceTimes.png" },
+  { image: "../../assets/images/partnersLogos/miningCom.png" },
+  { image: "../../assets/images/partnersLogos/popularMachines.png" },
+  { image: "../../assets/images/partnersLogos/fabcrosslogo.png" },
+  { image: "../../assets/images/partnersLogos/telegraph.png" },
+  { image: "../../assets/images/partnersLogos/ouestFrance.png" },
+]
