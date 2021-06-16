@@ -5,16 +5,20 @@ import Seo from "../components/seo"
 import backImg from "../assets/images/homepage/homeSwirl.svg"
 import horizontalCircuit from "../assets/images/homepage/circuitHorizontal.png"
 import videoBackImg from "../assets/images/homepage/videoSection.png"
-import backImg2 from "../assets/images/homepage/abstractUnderVideo.png"
+import arrow from "../assets/images/icons/arrow.png"
+import backImg2 from "../assets/images/homepage/abstractUnderVideo2.png"
 import backImg3 from "../assets/images/homepage/bottomSwirlImage2.png"
+
 import PartnerSection from "../components/homepage/PartnerSection"
 import HomeDiscoverSection from "../components/homepage/HomeDiscoverSection"
-import HomeFbannerSection from "../components/homepage/HomeFbannerSection"
 import HomeAboutSection from "../components/homepage/HomeAboutSection"
 import NDBsection1 from "../components/technology/NDBsection1"
 import NDBWrapper from "../components/wrapper"
+import CustomPartnersGrid from "../components/partners-grid/CustomPartnersGrid"
+import { partnerImages } from "../components/partners-grid/Data"
+import HomeBottomSection from "../components/homepage/HomeBottomSection"
 
-export default function Home() {
+const Home = () => {
   const data1 = {
     backgoundText1: "techno",
     backgoundText2: "logy",
@@ -30,7 +34,7 @@ export default function Home() {
         bannerLink="/contact/"
         bannerLinkName="Contact us"
         bannerDesc="SELF-CHARGING BATTERY"
-        backImg={`${backImg}`}
+        backImg={backImg}
         width="fullWidth"
       />
       <PartnerSection fullWidth />
@@ -57,21 +61,27 @@ export default function Home() {
         DiscoverTitle="Discover how we make lifelong self-charging batteries possible"
         fullWidth
       />
-      <HomeFbannerSection
+      <HomeBottomSection
+        bannerLink="/careers/"
+        arrow={arrow}
+        bannerLinkName="Believe In NDB"
+        sectionDesc="Read more about our values and responsibilites"
         backImg={backImg2}
-        bannerLink="Believe In NDB"
-        BelieveTitle="Read more about our values and reponsibilites"
-        pageName="home"
-        link="/"
+        heightAuto
+        bottom
       />
       <PartnerSection fullWidth />
-      <HomeFbannerSection
+      <CustomPartnersGrid data={partnerImages} />
+      <HomeBottomSection
+        bannerLink="/careers/"
+        arrow={arrow}
+        bannerLinkName="Join us"
+        sectionDesc="Invest In Your Abilities Join Us At NDB"
         backImg={backImg3}
-        bannerLink="Believe In NDB"
-        BelieveTitle="Invest In Your Abilities Join Us At NDB"
-        pageName="home"
-        link="/careers/"
+        top
+        left
       />
     </Layout>
   )
 }
+export default Home

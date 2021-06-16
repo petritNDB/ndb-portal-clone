@@ -1,11 +1,48 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
-.home__banner {
-  padding: 50px 50px;
-  .banner__left {
-    .banner__button {
-      margin-bottom: 0;
+.home {
+  overflow: hidden;
+  &__bottomSection {
+    position: relative;
+    //  width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    //  padding: 10rem 6rem;
+    height: clamp(200px, 600px, 600px);
+
+    img {
+      z-index: -1;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      height: 100%;
+      width: 40%;
+      p {
+        font-size: px2rem(30);
+        font-weight: $bold-font-weight;
+        margin-bottom: 6rem;
+        line-height: px2rem(37);
+      }
+      p::after,
+      p::before {
+        content: '"';
+      }
+      a {
+        max-width: 60%;
+      }
+    }
+  }
+  &__banner {
+    padding: 50px 50px;
+    .banner__left {
+      .banner__button {
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -28,7 +65,7 @@
   grid-template-columns: repeat(3, minmax(280px, 1fr));
   // grid-auto-rows: auto;
   grid-auto-rows: minmax(130px, auto);
-  grid-gap: 1rem;
+  gap: px2rem(20);
   justify-items: center;
   text-align: center;
   padding-top: 4rem;
@@ -196,306 +233,8 @@
   width: 80%;
   flex: 0.5 1;
 }
-.HeroTitle {
-  display: flex;
-  flex-direction: column;
-  // flex: 0.2;
-  margin-top: 150px;
-  margin-left: 0;
-  z-index: 1;
-  font-size: 83px;
-  font-weight: $bold-font-weight;
-  color: $text-color;
-  text-transform: uppercase;
-  width: 100%;
-  flex: 0 1;
-}
+
 .home__banner .banner__button {
   margin-bottom: 20px;
   z-index: 1;
-}
-// ------------
-// -----------------------------------------------------------------------------
-// This file contains styles that are specific to the home page.
-// -----------------------------------------------------------------------------
-
-.home__banner {
-  img.banner__overlay {
-    transform: translate(30%, 75%);
-    right: 0;
-    top: 35%;
-    width: 50%;
-  }
-}
-
-.home__banner {
-  .banner__button {
-    span {
-      font-weight: $light-font-weight;
-    }
-  }
-}
-
-// Partner Section
-.partnerWrap {
-  max-width: 100%;
-  background: #f8f8f8;
-  position: relative;
-  margin-top: 5rem;
-}
-.Partner_cards {
-  display: grid;
-  // grid-template-columns: repeat(3, 1fr);
-  grid-template-columns: repeat(3, minmax(280px, 1fr));
-  // grid-auto-rows: auto;
-  grid-auto-rows: minmax(130px, auto);
-  grid-gap: 1rem;
-  justify-items: center;
-  text-align: center;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  .Clogo {
-    padding: 29px 0.5rem;
-    background-color: #fff;
-    width: 100%;
-  }
-}
-
-// Joint Team Section
-.Jointeam_cards {
-  display: grid;
-  // grid-template-columns: repeat(3, 1fr);
-  grid-template-columns: repeat(4, minmax(280px, 1fr));
-  // grid-auto-rows: auto;
-  grid-auto-rows: minmax(130px, auto);
-  grid-gap: 1rem;
-  justify-items: center;
-  text-align: center;
-  padding: 52px 0;
-  .Clogo {
-    padding: 0.5rem;
-    background-color: #fff;
-    width: 100%;
-  }
-  img {
-    padding-top: 13%;
-  }
-}
-
-// what is NDB
-
-.what_is_NDB {
-  &__collapsible-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-  }
-  .grid-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: green;
-    padding: px2rem(56);
-    height: clamp(200px, 433px, 433px);
-    * {
-      border: 1px solid;
-    }
-    &__content {
-      text-align: center;
-    }
-    &__title {
-      margin-top: 0;
-    }
-    &__button {
-      text-align: center;
-    }
-    &__button > button {
-      background: none;
-      cursor: pointer;
-    }
-  }
-  &__section1 {
-    position: relative;
-    padding: 8rem 0 0;
-    .overlay1,
-    .overlay2 {
-      position: absolute;
-      font-size: 180px;
-      font-weight: $bold-font-weight;
-      text-transform: uppercase;
-      color: rgba($color: #000000, $alpha: 4%);
-    }
-    &-title {
-      display: block;
-      font-size: px2rem(36);
-      font-weight: $semibold-font-weight;
-      text-align: center;
-      margin: 0 auto;
-    }
-    .section-content {
-      font-size: px2rem(20);
-      font-weight: $medium-font-weight;
-      text-align: justify;
-      line-height: 33px;
-      margin: px2rem(35) auto;
-    }
-  }
-}
-
-.what_is_NDB_CalltoAction {
-  display: grid;
-  // grid-template-columns: repeat(3, 1fr);
-  grid-template-columns: repeat(3, minmax(280px, 1fr));
-  // grid-auto-rows: auto;
-  grid-auto-rows: minmax(130px, auto);
-  grid-gap: 1rem;
-  justify-items: center;
-  text-align: center;
-  .box {
-    padding: 1.5rem;
-    background-color: #f8f8f8;
-    width: 100%;
-    margin-bottom: 5rem;
-    padding-bottom: 4rem;
-  }
-  h3 {
-    font-size: 30px;
-    font-weight: $medium-font-weight;
-  }
-  img {
-    margin: 20px 0;
-  }
-  p {
-    width: 65%;
-    margin: 0 auto;
-    line-height: 21.94px;
-  }
-}
-
-.Discover__ndb-vid {
-  position: relative;
-  margin-top: px2rem(100);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1, minmax(0.625rem, 3.125rem));
-  min-height: 349px;
-  gap: 1px;
-  img {
-    z-index: -1;
-  }
-  .discover__gridItem {
-    font-size: px2rem(20);
-    font-weight: $regular-font-weight;
-    line-height: px2rem(28);
-  }
-}
-.Discover__ndb-vid {
-  .discover__gridItem {
-    h2 {
-      color: #fff;
-    }
-  }
-}
-
-.home__FBanner {
-  position: relative;
-  // max-height: px2rem(600);
-  height: clamp(200px, 600px, 600px);
-  display: flex;
-  justify-content: space-between;
-  padding-top: px2rem(50);
-  .banner__overlay {
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    transform: translate(0%, 73%);
-    width: 100%;
-    z-index: -1;
-    right: 0%;
-  }
-  .banner__left {
-    display: flex;
-    flex: 0.6;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-  }
-}
-
-.home__FBanner .banner__button {
-  display: flex;
-  flex-direction: column;
-  // flex: 0.2;
-  margin-bottom: 0.5rem;
-  margin-left: 8.5%;
-  z-index: 1;
-  flex: 0.3 1;
-  img {
-    transition: transform $trasform-duration;
-  }
-  &:hover img {
-    transform: translateX(10px);
-  }
-  span {
-    font-size: 30px;
-    font-weight: $bold-font-weight;
-  }
-}
-
-.home__FBanner {
-  &:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 50%;
-    height: clamp(200px, 600px, 600px);
-    top: 0;
-    background-image: linear-gradient(
-      to left,
-      rgb(255 255 255 / 0%),
-      rgb(255 255 255)
-    );
-  }
-  &:after {
-    content: "";
-    position: absolute;
-    right: 0;
-    width: 50%;
-    height: clamp(200px, 600px, 600px);
-    top: 0;
-    background-image: linear-gradient(
-      to right,
-      rgb(255 255 255 / 0%),
-      rgb(255 255 255)
-    );
-  }
-}
-.home__JoinBanner {
-  &:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 50%;
-    height: clamp(200px, 600px, 600px);
-    top: 0;
-    background-image: linear-gradient(
-      to left,
-      rgb(255 255 255 / 0%),
-      rgb(255 255 255)
-    );
-  }
-  &:after {
-    content: "";
-    position: absolute;
-    right: 0;
-    width: 50%;
-    height: clamp(200px, 600px, 600px);
-    top: 0;
-    background-image: linear-gradient(
-      to right,
-      rgb(255 255 255 / 0%),
-      rgb(255 255 255)
-    );
-  }
 }
