@@ -70,7 +70,7 @@ const Home = () => {
         heightAuto
         bottom
       />
-      <PartnerSection fullWidth />
+      {/* <PartnerSection fullWidth /> */}
       <CustomPartnersGrid data={partnerImages} />
       <HomeBottomSection
         bannerLink="/careers/"

@@ -4,6 +4,10 @@ import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 
 import backImg from "../../assets/images/news/headSwirlNews.svg"
+import CustomPartnersGrid from "../../components/partners-grid/CustomPartnersGrid"
+import { partnerImages } from "../../components/partners-grid/Data"
+import NewsGrid from "../../components/news/NewsGrid"
+import {news} from "./Data"
 
 const News = () => {
   return (
@@ -16,10 +20,8 @@ const News = () => {
         backImg={backImg}
         // bannerDesc="GET TO KNOW US"
       />
-
-      <div>
-        <h1>News Page</h1>
-      </div>
+      <NewsGrid news={news} />
+      <CustomPartnersGrid data={partnerImages} />
     </Layout>
   )
 }

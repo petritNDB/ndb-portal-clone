@@ -21,13 +21,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
-        icon: "src/assets/images/logo.svg",
+        icon: "src/assets/images/logo.png",
       },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: "src/assets/images/logo.svg",
+        icon: "src/assets/images/logo.png",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
