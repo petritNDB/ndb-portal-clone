@@ -7,7 +7,7 @@ import backImg from "../../assets/images/news/headSwirlNews.svg"
 import CustomPartnersGrid from "../../components/partners-grid/CustomPartnersGrid"
 import { partnerImages } from "../../components/partners-grid/Data"
 import NewsGrid from "../../components/news/NewsGrid"
-import {news} from "./Data"
+import { news } from "./Data"
 
 const News = () => {
   return (
@@ -21,7 +21,7 @@ const News = () => {
         // bannerDesc="GET TO KNOW US"
       />
       <NewsGrid news={news} />
-      <CustomPartnersGrid data={partnerImages} />
+      <CustomPartnersGrid data={partnerImages} margin="mt-0" />
     </Layout>
   )
 }

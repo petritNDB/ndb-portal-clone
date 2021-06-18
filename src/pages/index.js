@@ -17,6 +17,7 @@ import NDBWrapper from "../components/wrapper"
 import CustomPartnersGrid from "../components/partners-grid/CustomPartnersGrid"
 import { partnerImages } from "../components/partners-grid/Data"
 import HomeBottomSection from "../components/homepage/HomeBottomSection"
+import TabsWithCarousel from "../components/tabs-with-carousel/TabsWithCarousel"
 
 const Home = () => {
   const data1 = {
@@ -70,7 +71,7 @@ const Home = () => {
         heightAuto
         bottom
       />
-      {/* <PartnerSection fullWidth /> */}
+      <TabsWithCarousel />
       <CustomPartnersGrid data={partnerImages} />
       <HomeBottomSection
         bannerLink="/careers/"

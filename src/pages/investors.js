@@ -19,6 +19,7 @@ import { InvestorsData } from "../components/accordion/Data"
 import CustomGrid from "../components/customGrid"
 import NDBWrapper from "../components/wrapper"
 import CustomButton from "../components/customButton"
+import TabsWithCarousel from "../components/tabs-with-carousel/TabsWithCarousel"
 
 const Investors = () => {
   const data1 = {
@@ -87,6 +88,7 @@ const Investors = () => {
       />
       <Accordion accordionTitle="" data={InvestorsData} margin="mt-100" />
       <CustomGrid gridItems={gridItems} gridTitle="" />
+      <TabsWithCarousel />
       <NDBWrapper>
         <div className="investors-resources">
           <div className="item">

@@ -3,11 +3,25 @@ import React from "react"
 import navArrow from "../assets/images/icons/navArrow.png"
 
 const Navbar = () => {
+  // let menuItems = document.querySelectorAll(".nav-link")
+  // let menuArrow = document.querySelectorAll(".nav-link__arrow")
+  // let current = window.location.pathname.split("/")[1]
+  // if (current === "") return
+  // for (let i = 0, len = menuItems.length; i < len; i++) {
+  //   if (menuItems[i].getAttribute("href").indexOf(current) !== -1) {
+  //     menuItems[i].className += " active"
+  //     menuArrow[i].className += " active"
+  //   }
+  // }
   const handleClick = e => {
-    let current = window.location.pathname.split("/")[1]
-    if (current === "") return
     let menuItems = document.querySelectorAll(".nav-link")
     let menuArrow = document.querySelectorAll(".nav-link__arrow")
+    let current = window.location.pathname.split("/")[1]
+    console.log(
+      "❌❌ -> file: navbar.js -> line 20 -> Navbar -> current",
+      current
+    )
+    if (current === "") return
     for (let i = 0, len = menuItems.length; i < len; i++) {
       if (menuItems[i].getAttribute("href").indexOf(current) !== -1) {
         menuItems[i].className += " active"
