@@ -30,10 +30,11 @@ const NDBsection1 = ({
   textAlign,
   flex,
   margin,
+  style
 }) => {
   return (
-    <NDBWrapper>
-      <div className="technology__section1">
+    <NDBWrapper style={{ transform: `translateY(${style}px)` }}>
+      <div className="technology__section1" >
         <span className={`overlay1 ${backgoundText1Style}`}>
           {backgoundText1}
         </span>

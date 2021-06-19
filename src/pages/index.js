@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Layout from "../components/layout"
 import Banner from "../components/banner"
 import Seo from "../components/seo"
@@ -20,6 +20,16 @@ import HomeBottomSection from "../components/homepage/HomeBottomSection"
 import TabsWithCarousel from "../components/tabs-with-carousel/TabsWithCarousel"
 
 const Home = () => {
+  const [offsetY, setOffsetY] = useState(0)
+  console.log("❌❌ -> file: index.js -> line 24 -> Home -> offsetY", offsetY);
+  const handleScroll = () => setOffsetY(window.pageYOffset)
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   const data1 = {
     backgoundText1: "techno",
     backgoundText2: "logy",
@@ -37,6 +47,7 @@ const Home = () => {
         bannerDesc="SELF-CHARGING BATTERY"
         backImg={backImg}
         width="fullWidth"
+        style={offsetY * 0.5}
       />
       <PartnerSection fullWidth />
       <NDBsection1
@@ -47,6 +58,7 @@ const Home = () => {
         backgoundText1Style="top right"
         backgoundText2Style="bottom-20  left"
         buttonLink="#"
+        // style={offsetY * 0.6}
       />
       <NDBWrapper fullWidth>
         <div className="home-circuitHorizontal">

@@ -3,7 +3,7 @@ import NDBWrapper from "../wrapper"
 
 const CustomPartnersGrid = ({ data, margin }) => {
   return (
-    <div className={`partnerWrap ${margin ? "mt-0" : ""}`}>
+    <div className={`partnerWrap ${margin ? "mt-0" : ""}`} >
       <NDBWrapper>
         <div className="partners-section">
           {data.map((partner, index) => (

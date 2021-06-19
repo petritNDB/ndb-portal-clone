@@ -12,20 +12,27 @@ import NDBWrapper from "../components/wrapper"
 
 const NotFoundPage = () => (
   <NDBWrapper>
-    <Seo title="404: Not found" />
     <div className="not-found">
-      <div className="logo">
-        <img className="background-image" src={logo} alt="" />
-      </div>
-      <img src={background} className="overlay " alt="" />
-      <p>Page Not Found</p>
-      <div className="404-link">
-        <p>Looks like something was wrong! Go back to the</p>
-        <CustomButton
+      <Seo title="404: Not found" />
+      <Link to="/" className="logo">
+        <img className="404-logo" src={logo} alt="" />
+      </Link>
+      <img src={background} className="background-image middle right" alt="" />
+      <p>404</p>
+      <div className="link404">
+        <p>Page Not Found</p>
+        <div className="content">
+          <p>Looks like something was wrong! Go back to the</p>
+          <Link to="/">
+            Home page <img src={arrow} alt="" />
+          </Link>
+        </div>
+        {/* <CustomButton
           buttonImg={arrow}
           buttonTitle="Home page"
-          buttonWidth="w-20"
-        />
+          buttonWidth="w-100"
+          buttonTextOrder="1"
+        /> */}
       </div>
     </div>
   </NDBWrapper>
