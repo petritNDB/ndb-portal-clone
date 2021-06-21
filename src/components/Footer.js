@@ -20,9 +20,6 @@ const Footer = () => {
           <span>San Francisco</span>
           <span>California 94111, USA</span>
         </div>
-        <div className="copyright">
-          &copy; {new Date().getFullYear()}, NDB Technology ALL RIGHTS RESERVED.
-        </div>
       </div>
       <div className="center-side">
         <div className="contact">
@@ -77,6 +74,16 @@ const Footer = () => {
           <Link to="/sustain/">Sustainability</Link>
           <Link to="/investors/">Investor</Link>
           <Link to="/careers/">Careers</Link>
+        </div>
+      </div>
+      <div className="info-footer">
+        <div className="copyright">
+          &copy; {new Date().getFullYear()}, NDB Technology ALL RIGHTS RESERVED.
+        </div>
+        <div className="info">
+          <Link to="/">SITEMAP</Link>
+          <Link to="/">TERMS AND POLICY</Link>
+          <Link to="/news/press-kit/">PRESS</Link>
         </div>
       </div>
     </footer>

@@ -3,6 +3,7 @@ import NDBWrapper from "../wrapper"
 import loadMoreImg from "../../assets/images/icons/loadMore.png"
 // import Test from "../../pages/test"
 import Carousel from "./Carousel"
+import {graphql} from 'gatsby';
 
 const TabsWithCarousel = () => {
   const [toggleState, setToggleState] = useState(1)
@@ -61,6 +62,7 @@ const TabsWithCarousel = () => {
           <Carousel
             navigationPrevRef={navigationPrevRef}
             navigationNextRef={navigationNextRef}
+            // data={query.data}
           />
         </div>
 
@@ -79,3 +81,24 @@ const TabsWithCarousel = () => {
 }
 
 export default TabsWithCarousel
+// export const query = graphql`
+//   {
+//     allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/(carousel)/" } }) {
+//       totalCount
+//       nodes {
+//         id
+//         frontmatter {
+//           title
+//           slug
+//           datePublished
+//           author
+//           newsImage {
+//             childImageSharp {
+//               gatsbyImageData
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `

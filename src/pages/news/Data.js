@@ -1,9 +1,9 @@
-import news1 from "../../assets/images/news/news1.png"
-import news2 from "../../assets/images/news/news2.png"
-import news3 from "../../assets/images/news/news3.png"
-import news4 from "../../assets/images/news/news4.png"
-import news5 from "../../assets/images/news/news5.png"
-import news6 from "../../assets/images/news/news6.png"
+import news1 from "../../assets/images/news/newsCarousel/news1.png"
+import news2 from "../../assets/images/news/newsCarousel/news2.png"
+import news3 from "../../assets/images/news/newsCarousel/news3.png"
+import news4 from "../../assets/images/news/newsCarousel/news4.png"
+import news5 from "../../assets/images/news/newsCarousel/news5.png"
+import news6 from "../../assets/images/news/newsCarousel/news6.png"
 import moment from 'moment';
 
 export const news = [

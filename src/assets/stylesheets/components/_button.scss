@@ -17,5 +17,7 @@
     transform: translateX(10px);
   }
   &__name {
+    font-size: px2rem(20);
+    font-family: $text-font-stack;
   }
 }

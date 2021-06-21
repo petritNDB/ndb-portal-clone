@@ -21,13 +21,13 @@ import TabsWithCarousel from "../components/tabs-with-carousel/TabsWithCarousel"
 
 const Home = () => {
   const [offsetY, setOffsetY] = useState(0)
-  console.log("❌❌ -> file: index.js -> line 24 -> Home -> offsetY", offsetY);
+  // console.log("❌❌ -> file: index.js -> line 24 -> Home -> offsetY", offsetY);
   const handleScroll = () => setOffsetY(window.pageYOffset)
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
 
-    return () => window.removeEventListener("scroll", handleScroll)
+    // return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   const data1 = {
@@ -82,6 +82,7 @@ const Home = () => {
         backImg={backImg2}
         heightAuto
         bottom
+        marginBottom
       />
       <TabsWithCarousel />
       <CustomPartnersGrid data={partnerImages} />

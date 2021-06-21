@@ -147,7 +147,7 @@ const Technology = () => {
       />
       <TechGridOverlay />
       <NDBsafetyStrategy />
-      <NDBdifference fullWidth />
+      <NDBdifference fullWidth marginBottom/>
     </Layout>
   )
 }

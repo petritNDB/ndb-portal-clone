@@ -12,15 +12,16 @@ const HomeBottomSection = ({
   left,
   heightAuto,
   bottom,
+  marginBottom,
 }) => {
   return (
     <NDBWrapper>
-      <div className="home__bottomSection">
+      <div className={`home__bottomSection ${marginBottom && "mb-100"}`}>
         <img
           src={backImg}
           alt="ppppppppp"
           className={`overlay ${top && "top"} ${left && "left"}
-           ${bottom && "bottom"} ${heightAuto && "heightAuto"}`}
+           ${bottom && "bottom"} ${heightAuto && "heightAuto"} `}
         />
         <div className="content">
           <p>{sectionDesc}</p>

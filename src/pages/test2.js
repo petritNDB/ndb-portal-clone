@@ -1,3 +1,49 @@
+import React from "react"
+import { graphql } from "gatsby"
+import { StaticImage, GatsbyImage } from "gatsby-plugin-image"
+
+const ComponentName = ({ data }) => (
+  <div>
+    {data.allMarkdownRemark.nodes.map(({ frontmatter,id }) => (
+      <div>
+        <h1>{id}</h1>
+        <p>{frontmatter.author}</p>
+        <p>{frontmatter.slug}</p>
+        <p>{frontmatter.datePublished}</p>
+        <p>{frontmatter.title}</p>
+        <GatsbyImage
+          image={frontmatter.newsImage.childImageSharp.gatsbyImageData}
+          alt="fffff"
+        />
+      </div>
+    ))}
+  </div>
+)
+
+export const query = graphql`
+  {
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(carousel)/"}}) {
+      totalCount
+      nodes {
+        id
+        frontmatter {
+          title
+          slug
+          datePublished
+          author
+          newsImage {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
+export default ComponentName
+
 // import React, { useState, useEffect } from "react"
 // import { news } from "../pages/news/Data"
 
@@ -12,8 +58,6 @@
 // }
 
 // export default test2
-
-
 
 // const Page = () => {
 //   // Array of all news articles

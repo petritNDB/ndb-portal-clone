@@ -55,7 +55,7 @@
   img {
     width: 100%;
     filter: saturate(100%);
-    transition: all 0.3s;
+    transition: all 0.3s !important;
     &:hover {
       filter: saturate(0%);
     }

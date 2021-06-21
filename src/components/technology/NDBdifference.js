@@ -2,10 +2,10 @@ import React from "react"
 import circuit from "../../assets/images/svg/fullCirciut.svg"
 import NDBWrapper from "../wrapper"
 
-const NDBdifference = ({fullWidth}) => {
+const NDBdifference = ({fullWidth,marginBottom}) => {
   return (
     <NDBWrapper fullWidth={fullWidth}>
-      <div className="technology__ndb-circuit">
+      <div className={`technology__ndb-circuit ${marginBottom && "mb-100"}`}>
         <div className="circuit__gridItem">
           Standard batteries that are available in today's energy market utilize
           energy in a chemical form. A nuclear battery, on the other hand,

@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import { StaticImage, GatsbyImage } from "gatsby-plugin-image"
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react"
 
@@ -22,9 +24,33 @@ SwiperCore.use([Pagination, Navigation])
 
 /* ---------------------------- Carousel Section ---------------------------- */
 const Carousel = ({ navigationPrevRef, navigationNextRef }) => {
+  const data = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/carousel/" } }) {
+        totalCount
+        nodes {
+          id
+          frontmatter {
+            title
+            slug
+            datePublished
+            author
+            newsImage {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+  // console.log("❌❌ -> file: Carousel.js -> line 27 -> Carousel -> data", data)
   // const navigationPrevRef = useRef(null)
   // const navigationNextRef = useRef(null)
-
+  if (data === undefined) {
+    return <p className="loading">...Loading</p>
+  }
   return (
     <>
       <Swiper
@@ -59,24 +85,31 @@ const Carousel = ({ navigationPrevRef, navigationNextRef }) => {
           </button> */}
         {/* </div> */}
 
-        {news.map((article, index) => (
-          <SwiperSlide key={index}>
-            <div className="carousel-grid__item mt-0  " key={index}>
-              <img src={article.newsImg} className="" alt="news img" />
-              <div className="carousel-grid__content ">
-                <p className="author ">{article.author}</p>
-                <a href={article.newsUrl} className="title">
-                  {article.title}
-                </a>
+        {data.allMarkdownRemark.nodes.map(({ frontmatter, id }) => {
+          return (
+            <SwiperSlide key={id}>
+              <div className="carousel-grid__item mt-0  " key={id}>
+                <GatsbyImage
+                  image={frontmatter.newsImage.childImageSharp.gatsbyImageData}
+                  className=""
+                  alt="news img"
+                />
+                <div className="carousel-grid__content ">
+                  <p className="author ">{frontmatter.author}</p>
+                  <a href={frontmatter.slug} className="title">
+                    {frontmatter.title}
+                  </a>
+                </div>
+                <p className="carousel-grid__publishedDate">
+                  {frontmatter.datePublished}
+                </p>
               </div>
-              <p className="carousel-grid__publishedDate">
-                {article.datePosted}
-              </p>
-            </div>
-          </SwiperSlide>
-        ))}
+            </SwiperSlide>
+          )
+        })}
       </Swiper>
     </>
   )
 }
 export default Carousel
+
