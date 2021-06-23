@@ -1,0 +1,38 @@
+.middle-grid {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    //  flex: 0.1;
+    //  flex: 0.4;
+    img {
+      // width: 100%;
+    }
+    p {
+      font-size: px2rem(20);
+      font-weight: $semibold-font-weight;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.sustain-challenge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: px2rem(85);
+  p {
+    font-size: px2rem(20);
+    line-height: px2rem(36);
+    text-align: justify;
+    max-width: 50%;
+    //  flex: 0.6
+  }
+  img {
+    //   flex: 0.4;
+  }
+}

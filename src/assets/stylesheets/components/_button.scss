@@ -1,3 +1,23 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+.c-button {
+  font-size: px2rem(20);
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: -1px;
+    //  margin: auto;
+  }
+  &__img {
+    transition: transform 0.3s;
+  }
+  &__link:hover &__img {
+    transform: translateX(10px);
+  }
+  &__name {
+    font-size: px2rem(20);
+    font-family: $text-font-stack;
+  }
+}

@@ -6,24 +6,44 @@ footer {
   grid-template-columns: repeat(3, minmax(200px, 250px));
   gap: 5rem;
   justify-content: space-between;
+  align-items: flex-start;
   padding: px2rem(50);
   background: $gray;
-  margin-top: px2rem(180);
+  // margin-top: px2rem(180);
+  .info-footer {
+    grid-column: auto/span 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // margin: 2rem 0;
+    .info {
+      display: flex;
+      a {
+        margin: 0 2rem;
+      }
+      a:last-child {
+        margin-right: 0;
+      }
+    }
+    .copyright,
+    .info {
+      font-size: px2rem(10);
+      font-weight: $regular-font-weight;
+    }
+  }
+
   .left-side,
   .right-side,
   .center-side {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
   .left-side {
-    .copyright {
-      font-size: px2rem(10);
-      font-weight: $regular-font-weight;
-    }
-
     .address {
       font-size: px2rem(16);
       font-weight: $regular-font-weight;
+      margin: px2rem(46) 0 0;
       // line-height: 20px;
     }
   }
@@ -31,7 +51,7 @@ footer {
   .center-side {
     .contact {
       width: 100%;
-      margin: px2rem(46) 0 0;
+      // margin: px2rem(46) 0 0;
       .email,
       .phone {
         display: flex;
@@ -71,7 +91,7 @@ footer {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      margin: px2rem(46) 0 0;
+      // margin: px2rem(46) 0 0;
     }
     a {
       margin: px2rem(5);
@@ -84,10 +104,5 @@ footer {
     display: flex;
     justify-content: space-between;
     font-size: px2rem(10);
-  }
-  .address,
-  .copyright,
-  a {
-    margin: px2rem(46) 0 0;
   }
 }

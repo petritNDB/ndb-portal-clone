@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 // 1. Configuration and helpers
 @import
   'abstracts/variables',
@@ -26,7 +27,14 @@
 // 5. Components
 @import
   'components/button',
-  'components/tabs';
+  'components/tabs',
+  'components/ndb-vision',
+  'components/custom-grid',
+  'components/accordion',
+  'components/form',
+  'components/custom-partners-grid',
+  'components/tabs-with-carousel',
+  'components/carousel';
 
 // 6. Page-specific styles
 @import

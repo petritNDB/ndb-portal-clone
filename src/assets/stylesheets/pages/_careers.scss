@@ -1,0 +1,29 @@
+.careers_bio-section {
+  .bio {
+    display: flex;
+    justify-content: space-around;
+    &__content {
+      flex: 0.7;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      // margin-left: px2rem(70);
+
+      .title {
+        font-size: px2rem(27);
+        font-weight: $bold-font-weight;
+        line-height: px2rem(29);
+        margin-bottom: 1rem;
+      }
+      .desc {
+        font-size: px2rem(20);
+        line-height: px2rem(33);
+      }
+    }
+    .number {
+      flex: 0.2;
+      font-size: px2rem(168);
+      font-weight: $bold-font-weight;
+    }
+  }
+}

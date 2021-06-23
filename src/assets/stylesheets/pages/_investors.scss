@@ -1,12 +1,23 @@
-.investors-page {
-   .investors__banner {
-     display: flex;
-     justify-content: space-between;
-     padding-top: px2rem(50);
-     * {
-       //   border: 1px solid red;
-     }
-   }
- 
- }
- 
+.investors {
+  .investors__banner {
+    display: flex;
+    justify-content: space-between;
+    padding-top: px2rem(50);
+    * {
+      //   border: 1px solid red;
+    }
+  }
+  .investors-resources {
+    display: flex;
+    justify-content: space-between;
+    margin: px2rem(100) auto;
+    .item {
+      max-width: 30%;
+      p {
+        font-size: px2rem(20);
+        font-weight: $semibold-font-weight;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

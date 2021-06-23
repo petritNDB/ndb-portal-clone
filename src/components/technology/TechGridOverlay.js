@@ -1,5 +1,5 @@
 import React from "react"
-import NDBWrapper from "../NDBWrapper"
+import NDBWrapper from "../wrapper"
 
 const TechGridOverlay = () => {
   return (

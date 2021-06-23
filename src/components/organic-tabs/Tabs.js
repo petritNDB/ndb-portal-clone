@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import TabButtons from "./TabButtons"
 
-const Tabs = ({ children }) => {
+const Tabs = ({ children, buttonsName }) => {
   const label = children[0].props.label
 
   const [activeTab, setActiveTab] = useState(label)
@@ -23,6 +23,7 @@ const Tabs = ({ children }) => {
         activeTab={activeTab}
         buttons={buttons}
         changeTab={changeTab}
+        buttonsName={buttonsName}
       />
       <div className="tab-content">{content}</div>
     </div>

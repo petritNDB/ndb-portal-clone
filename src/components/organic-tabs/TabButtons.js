@@ -1,9 +1,9 @@
 import React from "react"
 
-const TabButtons = ({ buttons, changeTab, activeTab }) => {
+const TabButtons = ({ buttons, changeTab, activeTab, buttonsName }) => {
   return (
     <div className="tab-buttons">
-      <p className="buttons-title">Applications</p>
+      <p className="buttons-title">{buttonsName}</p>
       {buttons.map((button, index) => {
         return (
           <button

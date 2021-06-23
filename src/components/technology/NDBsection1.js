@@ -1,31 +1,108 @@
+// import { Link } from "gatsby"
 import React from "react"
-import Container from "../Container"
-import NDBWrapper from "../NDBWrapper"
+import Container from "../container"
+import NDBWrapper from "../wrapper"
+import quoteImg from "../../assets/images/icons/quoteCornerGreen.png"
+import CustomButton from "../customButton"
 
-const NDBsection1 = () => {
+const NDBsection1 = ({
+  backgoundText1,
+  backgoundText2,
+  backgoundText3,
+  backgoundText1Style,
+  backgoundText2Style,
+  backgoundText3Style,
+  NDBSectionTitle,
+  quote,
+  quoteAuthor,
+  paragraphUnderQuote1,
+  paragraphUnderQuote2,
+  paragraphUnderQuote3,
+  paragraphOverQuote1,
+  paragraphOverQuote2,
+  sectionPapper,
+  // quoteImg,
+  linkContent,
+  buttonLink,
+  buttonWidth,
+  buttonTitle,
+  buttonImg,
+  textAlign,
+  flex,
+  margin,
+  style
+}) => {
   return (
-    <NDBWrapper>
-      <div className="technology__section1">
-        <span className="overlay1 left top">design</span>
-        <span className="overlay2 right middle">&#38;</span>
+    <NDBWrapper style={{ transform: `translateY(${style}px)` }}>
+      <div className="technology__section1" >
+        <span className={`overlay1 ${backgoundText1Style}`}>
+          {backgoundText1}
+        </span>
+        <span className={`overlay2 ${backgoundText2Style}`}>
+          {backgoundText2}
+        </span>
+        <span className={`overlay2 ${backgoundText3Style}`}>
+          {backgoundText3}
+        </span>
         <Container>
-          <span className="technology__section1-title">NDB</span>
-          <p className="section-content">
-            NDB is one of the earliest adopters and developers of nuclear
-            voltaic cells for mid and high power applications. The self charging
-            battery produces stable power by converting the energy released from
-            nuclear decay into usable energy all throughout its lifetime which
-            is generally many years.
-          </p>
-          <p className="section-content">
-            Nuclear batteries have been around for sometime but the batteries
-            are limited to low power applications due to their efficiency. NDB
-            optimises this technology for high power applications. We propose to
-            reuse nuclear fuel by recycling it to extract radioisotopes.
-            Isotopes from the recycled nuclear waste or from an accelerator
-            release a high level of energy particles that can be transformed
-            into usable energy.
-          </p>
+          <span className="technology__section1-title">{NDBSectionTitle}</span>
+          {paragraphOverQuote1 && (
+            <p
+              className={`section-content ${margin ? margin : ""} ${
+                textAlign ? textAlign : ""
+              }`}
+            >
+              {paragraphOverQuote1}
+            </p>
+          )}
+          {paragraphOverQuote2 && (
+            <p
+              className={`section-content ${margin ? margin : ""} ${
+                textAlign ? textAlign : ""
+              }`}
+            >
+              {paragraphOverQuote2}
+            </p>
+          )}
+          {quote && (
+            <div className="section-quote">
+              <img src={quoteImg} alt="section quote" />
+              <img src={quoteImg} alt="section quote" />
+              <p>{quote}</p>
+              <span className="quote-author">{quoteAuthor}</span>
+            </div>
+          )}
+          {paragraphUnderQuote1 && (
+            <p className={`section-content ${textAlign ? textAlign : ""}`}>
+              {paragraphUnderQuote1}
+            </p>
+          )}
+          {paragraphUnderQuote2 && (
+            <p className={`section-content ${textAlign ? textAlign : ""}`}>
+              {paragraphUnderQuote2}
+            </p>
+          )}
+          {paragraphUnderQuote3 && (
+            <p className={`section-content ${textAlign ? textAlign : ""}`}>
+              {paragraphUnderQuote3}
+            </p>
+          )}
+          {sectionPapper && (
+            <div className="section-image">
+              <img src={sectionPapper} />
+            </div>
+          )}
+
+          <CustomButton
+            linkContent={linkContent}
+            buttonLink={buttonLink}
+            buttonWidth={buttonWidth}
+            buttonTitle={buttonTitle}
+            buttonImg={buttonImg}
+            textAlign={textAlign}
+            flex={flex}
+            margin={margin}
+          />
         </Container>
       </div>
     </NDBWrapper>

@@ -1,0 +1,52 @@
+.vision {
+  position: relative;
+  overflow: hidden;
+}
+.vision-title {
+  width: 100%;
+  font-size: px2rem(36);
+  font-weight: $semibold-font-weight;
+  margin-bottom: px2rem(40);
+  text-align: center;
+}
+.ndb-vision {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, minmax(200px, 412px));
+  gap: 1rem;
+
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: $white;
+    padding: 6rem;
+
+    .card-image {
+      z-index: -1;
+    }
+    .card-title {
+      font-size: px2rem(24);
+      font-weight: $semibold-font-weight;
+      width: 100%;
+    }
+    .card-content {
+      font-size: px2rem(20);
+      line-height: 30px;
+      color: $white;
+      text-align: center;
+      // font-weight: $regular-font-weight;
+      border: 1px solid red;
+    }
+    .card-content-custom {
+      font-size: px2rem(20);
+      line-height: 33px;
+      color: $text-color;
+      text-align: center;
+      // font-weight: $regular-font-weight;
+      border: 1px solid red;
+    }
+  }
+}

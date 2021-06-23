@@ -7,9 +7,6 @@ import instagram from "../assets/images/icons/instagram.png"
 import linkedIn from "../assets/images/icons/linkedin.png"
 import twitter from "../assets/images/icons/twitter.png"
 
-import Container from "../components/Container"
-import NDBWrapper from "./NDBWrapper"
-
 const Footer = () => {
   return (
     // <NDBWrapper>
@@ -23,9 +20,6 @@ const Footer = () => {
           <span>San Francisco</span>
           <span>California 94111, USA</span>
         </div>
-        <div className="copyright">
-          &copy; {new Date().getFullYear()}, NDB Technology ALL RIGHTS RESERVED.
-        </div>
       </div>
       <div className="center-side">
         <div className="contact">
@@ -38,7 +32,7 @@ const Footer = () => {
             <a href="tel:+1 650 252 0002">+1 650 252 0002</a>
           </div>
         </div>
-        <Link to="contact" className="banner__button">
+        <Link to="/contact/" className="banner__button">
           <img src={arrow} alt="" />
           <span>Contact us</span>
         </Link>
@@ -49,13 +43,25 @@ const Footer = () => {
           >
             <img src={linkedIn} alt="social-linkedin" />
           </a>
-          <a href="https://twitter.com/ndbtechnology" target="_blank">
+          <a
+            href="https://twitter.com/ndbtechnology"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={twitter} alt="social-twitter" />
           </a>
-          <a href="https://www.instagram.com/ndbtechnology" target="_blank">
+          <a
+            href="https://www.instagram.com/ndbtechnology"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={instagram} alt="social-instagram" />
           </a>
-          <a href="https://www.facebook.com/ndb.technology/" target="_blank">
+          <a
+            href="https://www.facebook.com/ndb.technology/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={facebook} alt="social-facebook" />
           </a>
         </div>
@@ -63,16 +69,23 @@ const Footer = () => {
       <div className="right-side">
         <div className="footer-menu">
           <Link to="/">Home</Link>
-          <Link to="technology">Technology</Link>
-          <Link to="company">Company</Link>
-          <Link to="sustain">Sustainability</Link>
-          <Link to="investor">Investor</Link>
-          <Link to="careers">Careers</Link>
+          <Link to="/technology/">Technology</Link>
+          <Link to="/company/">Company</Link>
+          <Link to="/sustain/">Sustainability</Link>
+          <Link to="/investors/">Investor</Link>
+          <Link to="/careers/">Careers</Link>
         </div>
-
       </div>
-       
-       
+      <div className="info-footer">
+        <div className="copyright">
+          &copy; {new Date().getFullYear()}, NDB Technology ALL RIGHTS RESERVED.
+        </div>
+        <div className="info">
+          <Link to="/">SITEMAP</Link>
+          <Link to="/">TERMS AND POLICY</Link>
+          <Link to="/news/press-kit/">PRESS</Link>
+        </div>
+      </div>
     </footer>
     // </NDBWrapper>
   )

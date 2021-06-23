@@ -1,13 +1,20 @@
 import React from "react"
 
-import Container from "./Container"
-import Navbar from "./Navbar"
+import Navbar from "./navbar"
 import { Link } from "gatsby"
+import NDBWrapper from "./wrapper"
 import logo from "../assets/images/logo.png"
 import arrow from "../assets/images/icons/arrow.png"
-import NDBWrapper from "./NDBWrapper"
 
-const Banner = ({ pageName, backImg, bannerLink }) => {
+const Banner = ({
+  pageName,
+  backImg,
+  bannerLink,
+  bannerDesc,
+  bannerLinkName,
+  width,
+  style,
+}) => {
   let className = ""
 
   if (pageName) {
@@ -16,21 +23,28 @@ const Banner = ({ pageName, backImg, bannerLink }) => {
 
   return (
     // <Container>
-    <NDBWrapper>
-      <div className={className}>
+    <NDBWrapper fullWidth={width ? width : ""} style={{ transform: `translateY(${style}px)` }}>
+      <div className={className} >
         {/* <div className="banner"> */}
         <div className="banner__left">
           <Link to="/">
-            <img src={logo} alt="" />
+            <img src={logo} alt="site icon" />
           </Link>{" "}
           <img
             src={backImg}
             className="banner__overlay"
             alt="banner background "
           />
-          <Link to="" className="banner__button">
+          <p
+            className={`banner__description ${
+              pageName === "home" ? "home__banner-desc" : ""
+            }`}
+          >
+            {bannerDesc}
+          </p>
+          <Link to={bannerLink} className="banner__button">
             <img src={arrow} alt="" />
-            <span>{bannerLink}</span>
+            <span>{bannerLinkName}</span>
           </Link>
         </div>
         <Navbar />

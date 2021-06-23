@@ -1,3 +1,307 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+.home {
+  overflow: hidden;
+  &__bottomSection {
+    position: relative;
+    //  width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    //  padding: 10rem 6rem;
+    height: clamp(200px, 600px, 600px);
+
+    img {
+      z-index: -1;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      height: 100%;
+      width: 40%;
+      p {
+        font-size: px2rem(30);
+        font-weight: $bold-font-weight;
+        margin-bottom: 6rem;
+        line-height: px2rem(37);
+      }
+      p::after,
+      p::before {
+        content: '"';
+      }
+      a {
+        max-width: 60%;
+      }
+    }
+  }
+  &__banner {
+    padding: 50px 50px;
+    .banner__left {
+      .banner__button {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.home__banner-desc {
+  font-size: px2rem(83);
+  font-weight: $bold-font-weight;
+  line-height: 81px;
+  max-width: 90%;
+}
+// Partner Section
+.partnerWrap {
+  max-width: 100%;
+  background: #f8f8f8;
+  position: relative;
+  // margin-top: 5rem;
+}
+.Partner_cards {
+  display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  // grid-auto-rows: auto;
+  grid-auto-rows: minmax(130px, auto);
+  gap: px2rem(20);
+  justify-items: center;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: $gray;
+  .Clogo {
+    position: relative;
+    padding: 29px 0.5rem;
+    background-color: #fff;
+    width: 100%;
+    img {
+      transition: all 0.3s;
+      // mix-blend-mode: luminosity;
+      filter: saturate(0%);
+    }
+    &:hover > img {
+      // mix-blend-mode: revert;
+      filter: saturate(100%);
+    }
+  }
+}
+.home-circuitHorizontal {
+  margin: 3rem auto;
+}
+.callToAction {
+  display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  // grid-auto-rows: auto;
+  grid-auto-rows: minmax(130px, auto);
+  grid-gap: 1rem;
+  justify-items: center;
+  text-align: center;
+  .box {
+    padding: 1.5rem;
+    background-color: #f8f8f8;
+    width: 100%;
+    margin-bottom: 5rem;
+    padding-bottom: 4rem;
+  }
+  &__title {
+    font-size: px2rem(30);
+    font-weight: $medium-font-weight;
+  }
+  img {
+    margin: 20px 0;
+  }
+  &__content {
+    width: 65%;
+    font-size: px2rem(18);
+    margin: 0 auto;
+    line-height: 21.94px;
+  }
+}
+
+//VIDEO
+.home__videoSection {
+  position: relative;
+}
+.video-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.home__FBanner {
+  //   padding: 5rem;
+  height: clamp(200px, 600px, 600px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  .banner__left {
+    display: flex;
+    flex: 0.7;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 0 6rem;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  .BelieveTitle {
+    font-size: px2rem(30);
+    font-weight: $bold-font-weight;
+    max-width: 60%;
+  }
+}
+.bold-30 {
+  font-size: px2rem(30);
+  font-weight: $bold-font-weight;
+}
+// -------------
+
+//  .home__DiscovrBanner:before {
+// 	content: "";
+// 	position: absolute;
+// 	left: 0;
+// 	width: 90%;
+// 	height: clamp(200px, 600px, 600px);
+// 	top: 0;
+// 	background-image: linear-gradient(to left, rgb(0 0 0 / 0%), rgb(0 0 0));
+//  }
+
+.home__DiscovrBanner {
+  // position: relative;
+  position: absolute;
+  //  max-height: px2rem(600);
+  // height: clamp(200px, 649px, 649px);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  //   padding-top: px2rem(50);
+  z-index: 1;
+  &.banner__overlay {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    width: 100%;
+    // z-index: -1;
+    right: 0%;
+  }
+  .banner__left {
+    display: flex;
+    flex: 0.6;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  .banner__button {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    // flex: 0.2;
+    margin-bottom: 4rem;
+    margin-left: 8.5%;
+    z-index: 1;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    img {
+      transition: transform $trasform-duration;
+      width: 100%;
+    }
+    &:hover img {
+      transform: translateX(10px);
+    }
+    span {
+      font-family: $text-font-stack;
+      font-size: 30px;
+      font-weight: $light-font-weight;
+      color: $gray;
+    }
+  }
+}
+.banner__closeButton {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  cursor: pointer;
+  z-index: 3;
+  span {
+    display: block;
+    height: 2px;
+    width: 30px;
+    background: $black-faded;
+    margin: 1rem abs($number: 0);
+  }
+  span:nth-child(1) {
+    transform: translate(0, 20px) rotate(45deg);
+    // }
+  }
+  span:nth-child(2) {
+    transform: translate(0, 2px) rotate(-45deg);
+  }
+}
+// .home__DiscovrBanner .banner__overlay {
+//   position: absolute;
+//   top: 0%;
+//   left: 0%;
+//   transform: translate(0%, 0%);
+//   width: 100%;
+//   // z-index: -1;
+//   right: 0%;
+// }
+// .home__DiscovrBanner .banner__left {
+//   display: flex;
+//   flex: 0.6;
+//   flex-direction: column;
+//   align-items: flex-start;
+//   justify-content: flex-end;
+// }
+// .home__DiscovrBanner .banner__button {
+//   display: flex;
+//   flex-direction: column;
+//   // flex: 0.2;
+//   margin-bottom: 4rem;
+//   margin-left: 8.5%;
+//   z-index: 1;
+//   background: none;
+//   outline: none;
+//   border: none;
+//   img {
+//     transition: transform $trasform-duration;
+//   }
+//   &:hover img {
+//     transform: translateX(10px);
+//   }
+//   span {
+//     font-size: 30px;
+//     font-weight: $light-font-weight;
+//     color: #fff;
+//   }
+// }
+
+.DisTitle {
+  display: flex;
+  flex-direction: column;
+  // flex: 0.2;
+  margin-bottom: 4.5rem;
+  margin-left: 8.5%;
+  z-index: 1;
+  font-size: 36px;
+  font-weight: $semibold-font-weight;
+  color: #fff;
+  width: 80%;
+  flex: 0.5 1;
+}
+
+.home__banner .banner__button {
+  margin-bottom: 20px;
+  // z-index: 1;
+}

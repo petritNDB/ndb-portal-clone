@@ -1,0 +1,28 @@
+.partners-section {
+  display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, minmax(280px, 1fr));
+  // grid-auto-rows: auto;
+  grid-auto-rows: minmax(130px, auto);
+  gap: px2rem(20);
+  justify-items: center;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: $gray;
+  &__item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $white;
+    transition: all 0.3s;
+    // mix-blend-mode: luminosity;
+    filter: saturate(0%);
+    &:hover  {
+      // mix-blend-mode: revert;
+      filter: saturate(100%);
+    }
+  }
+}
